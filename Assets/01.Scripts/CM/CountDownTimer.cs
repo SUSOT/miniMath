@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -5,8 +6,9 @@ using UnityEngine.UI;
 public class CountDownTimer : MonoBehaviour
 {
     [SerializeField] private Slider _timerSlider;
-    [SerializeField] private int _coolDownTime = 120;
-    [SerializeField] private float _currentTime;
+    [SerializeField] private float _coolDownTime = 120;
+    private float _currentTime;
+    private bool isInvoke = false;
     public UnityEvent TimeOver;
 
 
@@ -18,9 +20,11 @@ public class CountDownTimer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_timerSlider.value < 0)
+        if (_timerSlider.value <= 0 && isInvoke == false)
         {
             TimeOver?.Invoke();
+            Debug.Log("TimeOVer");
+            isInvoke = true;
         }
         else
         {
