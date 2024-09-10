@@ -6,5 +6,5 @@ using UnityEngine;
 public class MiniGameSO : ScriptableObject
 {
     public GameObject miniGameSituationPrefab;
-    public float timeLimit;
+    public AudioClip backGroundBGM;
 }
