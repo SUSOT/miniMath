@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c96a3593eb9bb3848bafaeb697d4004a, type: 3}
-  m_Name: Pencing
+  m_Name: Example
   m_EditorClassIdentifier: 
-  miniGameSituationPrefab: {fileID: 3804166839559893914, guid: 17ba6922ccc9d224f9624929391dbb16,
+  miniGameSituationPrefab: {fileID: 2152953657960905467, guid: 1beb1fcb00dea92458d0acfaf0ed7dbe,
     type: 3}
   backGroundBGM: {fileID: 8300000, guid: 5d607b7c8476b674385cc9752b3c4634, type: 3}
