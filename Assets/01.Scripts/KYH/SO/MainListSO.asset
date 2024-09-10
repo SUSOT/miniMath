@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925799790f98f9e43b76a1db94e62e63, type: 3}
   m_Name: MainListSO
   m_EditorClassIdentifier: 
-  gameSO: {fileID: 0}
+  randomMiniGameList:
+  - {fileID: 11400000, guid: 48fa32ac0fe06bd4e8ffbff587ef9326, type: 2}
+  - {fileID: 11400000, guid: 48fa32ac0fe06bd4e8ffbff587ef9326, type: 2}
