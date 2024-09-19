@@ -285,11 +285,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mom's Pukung Pasung\n Math Class"
+  m_text: MiniMath
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 815a3fe4027aa744b964ab3ef1f33be1, type: 2}
-  m_sharedMaterial: {fileID: 4140952130145205623, guid: 815a3fe4027aa744b964ab3ef1f33be1,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -497,9 +496,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD558\uB0A8\uC790\uB418\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 815a3fe4027aa744b964ab3ef1f33be1, type: 2}
-  m_sharedMaterial: {fileID: 4140952130145205623, guid: 815a3fe4027aa744b964ab3ef1f33be1,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -753,9 +751,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC2DC\uC791\uD558\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 815a3fe4027aa744b964ab3ef1f33be1, type: 2}
-  m_sharedMaterial: {fileID: 4140952130145205623, guid: 815a3fe4027aa744b964ab3ef1f33be1,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
