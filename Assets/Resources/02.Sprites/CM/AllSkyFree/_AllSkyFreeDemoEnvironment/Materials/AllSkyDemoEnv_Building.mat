@@ -129,7 +129,7 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColour: {r: 0.7352941, g: 0.6942042, b: 0.6325692, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &1302596962528755207
+--- !u!114 &2500414933143850433
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
