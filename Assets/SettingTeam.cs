@@ -6,7 +6,7 @@ using TMPro;
 public class SettingTeam : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    private int currentNum = 1;
+    public int currentNum { get; private set; } = 1;
     private int prevNum = 1;
     public List<GameObject> teamCard = new List<GameObject>();
 
