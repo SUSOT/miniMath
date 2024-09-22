@@ -20,7 +20,7 @@ public class MiniGameManager : MonoBehaviour
         if (gameSequencing != null)
             gameSequencing.SetActive(false);
 
-        int randNum = Random.Range(0, miniGameList.randomMiniGameList.Count - 1);
+        int randNum = Random.Range(0, miniGameList.randomMiniGameList.Count);
         newMiniGame = miniGameList.randomMiniGameList[randNum];
         print(AudioManager.Instance);
         AudioManager.Instance.PlaySound2D(newMiniGame.backGroundBGM.name);
