@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miniGameSituationPrefab: {fileID: 5110738418504056159, guid: 6578de507af676340a36c167b46092f3,
     type: 3}
-  backGroundBGM: {fileID: 8300000, guid: 5d607b7c8476b674385cc9752b3c4634, type: 3}
+  backGroundBGM: {fileID: 8300000, guid: aba01c22a6dc4fd4e9b96077ca337d0e, type: 3}
