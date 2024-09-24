@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MainListSO
   m_EditorClassIdentifier: 
   randomMiniGameList:
-  - {fileID: 11400000, guid: 48fa32ac0fe06bd4e8ffbff587ef9326, type: 2}
-  - {fileID: 11400000, guid: 48fa32ac0fe06bd4e8ffbff587ef9326, type: 2}
+  - {fileID: 11400000, guid: 631e305bbfb06164ea1e0a79099d233b, type: 2}
+  - {fileID: 11400000, guid: e3a54198435bf0c428bb229c1a1fb4df, type: 2}
+  - {fileID: 11400000, guid: 90d22958bde8629478578e3020e7284b, type: 2}
