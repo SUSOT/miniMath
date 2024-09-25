@@ -1997,8 +1997,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4659595546327169922}
-  - component: {fileID: 6398190284007750380}
   - component: {fileID: 1924091935188785428}
+  - component: {fileID: 1496389857738977251}
   m_Layer: 0
   m_Name: DoorRightAnswer
   m_TagString: Untagged
@@ -2021,19 +2021,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9164566522636917758}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6398190284007750380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5522673631465036580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbee26e34e2594648aa15ab909b50fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutScene: {fileID: 1924091935188785428}
 --- !u!320 &1924091935188785428
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -2111,6 +2098,19 @@ PlayableDirector:
     value: {fileID: 8556950130858561486}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &1496389857738977251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522673631465036580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbee26e34e2594648aa15ab909b50fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutScene: {fileID: 1924091935188785428}
 --- !u!1 &5649887135826054507
 GameObject:
   m_ObjectHideFlags: 0

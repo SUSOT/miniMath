@@ -26,7 +26,7 @@ public class CountDownTimer : MonoBehaviour
             Debug.Log("TimeOVer");
             isInvoke = true;
         }
-        else
+        else if(_timerSlider.gameObject.activeSelf)
         {
             _currentTime -= Time.fixedDeltaTime;
         }
