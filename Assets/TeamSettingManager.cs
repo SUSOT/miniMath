@@ -16,7 +16,7 @@ public class TeamSettingManager : MonoBehaviour
         }
         for(int i =0; i<GameManager.Instance.teamCount - 1; i++)
         {
-            image[i].sprite = GameManager.Instance.teamsIcon[i];
+            //image[i].sprite = GameManager.Instance.teamsIcon[i];
         }
     }
 }

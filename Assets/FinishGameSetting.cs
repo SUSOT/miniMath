@@ -16,7 +16,7 @@ public class FinishGameSetting : MonoBehaviour
 
         foreach(CharacterImageChange imageChange in characterImageChanges)
         {
-            GameManager.Instance.teamsIcon.Add(imageChange.currentCardNum + 1, imageChange.characterImage.sprite);
+            //GameManager.Instance.teamIcon.Add(imageChange.currentCardNum + 1, imageChange.characterImage.sprite);
         }
         SceneManager.LoadScene("MiniGame");
     }
