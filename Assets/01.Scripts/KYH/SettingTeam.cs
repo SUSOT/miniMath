@@ -10,6 +10,10 @@ public class SettingTeam : MonoBehaviour
     private int prevNum = 1;
     public List<GameObject> teamCard = new List<GameObject>();
 
+    private void Start()
+    {
+        GameManager.Instance.teamCount = 1;
+    }
 
     private void Update()
     {

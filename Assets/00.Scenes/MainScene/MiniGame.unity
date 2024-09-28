@@ -1116,7 +1116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1083895963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,11 +1134,6 @@ MonoBehaviour:
   - {fileID: 878176417103448253}
   - {fileID: 9153197813468799499}
   - {fileID: 7384451271125446769}
-  image:
-  - {fileID: 6294664174280017895}
-  - {fileID: 2612948453671983309}
-  - {fileID: 6298942550055416443}
-  - {fileID: 5626738954159579137}
 --- !u!4 &1083895964
 Transform:
   m_ObjectHideFlags: 0
@@ -3019,6 +3014,7 @@ GameObject:
   - component: {fileID: 6662229898644524536}
   - component: {fileID: 4747584097963569248}
   - component: {fileID: 7339165071443848357}
+  - component: {fileID: 7339165071443848358}
   m_Layer: 5
   m_Name: TeamCard2
   m_TagString: Untagged
@@ -3208,7 +3204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 530.25, y: -383.34494}
+  m_AnchoredPosition: {x: 1010.5, y: -383.34494}
   m_SizeDelta: {x: 100, y: 61.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &3417339015188271826
@@ -3226,9 +3222,9 @@ RectTransform:
   - {fileID: 6030421127115927963}
   m_Father: {fileID: 1437381877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -383.34494}
   m_SizeDelta: {x: 100, y: 61.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3444310288938681086
@@ -3280,7 +3276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -383.34494}
+  m_AnchoredPosition: {x: 1010.5, y: -383.34494}
   m_SizeDelta: {x: 100, y: 61.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3940863329752600708
@@ -3558,6 +3554,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7339165071443848358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878176417103448253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f67d47460d10e498feabb0d8efb303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSO: {fileID: 11400000, guid: 7f89e8e8570505f4fa00cb4aebb7b17f, type: 2}
 --- !u!1 &7384451271125446769
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,6 +3578,7 @@ GameObject:
   - component: {fileID: 3900611273364026676}
   - component: {fileID: 3150251546653477036}
   - component: {fileID: 1120494971356697705}
+  - component: {fileID: 7384451271125446770}
   m_Layer: 5
   m_Name: 3TeamCard4
   m_TagString: Untagged
@@ -3576,6 +3586,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7384451271125446770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384451271125446769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f67d47460d10e498feabb0d8efb303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSO: {fileID: 11400000, guid: 2f7ac54127f16874dab9e0db65c22386, type: 2}
 --- !u!1 &9153197813468799499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,6 +3610,7 @@ GameObject:
   - component: {fileID: 3413067631359600462}
   - component: {fileID: 3660184819277126358}
   - component: {fileID: 1653009738985522707}
+  - component: {fileID: 9153197813468799500}
   m_Layer: 5
   m_Name: TeamCard3
   m_TagString: Untagged
@@ -3594,6 +3618,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &9153197813468799500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153197813468799499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f67d47460d10e498feabb0d8efb303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSO: {fileID: 11400000, guid: 330188440699471478e6cb1c5377b13c, type: 2}
 --- !u!1 &9167012983858222999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,13 +3642,27 @@ GameObject:
   - component: {fileID: 3417339015188271826}
   - component: {fileID: 3673499015837232970}
   - component: {fileID: 1639836717606089615}
+  - component: {fileID: 9167012983858223000}
   m_Layer: 5
   m_Name: TeamCard1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
+--- !u!114 &9167012983858223000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167012983858222999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f67d47460d10e498feabb0d8efb303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSO: {fileID: 11400000, guid: d60b0302cfab889478e2e2f6b11abb2e, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
