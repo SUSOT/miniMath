@@ -16,8 +16,8 @@ public class TextWarning : MonoBehaviour
         SafeKill(_seq);
 
         _seq = DOTween.Sequence()
-            .Append(warningText.DOFade(duration: 1, endValue: 1))
-            .Append(warningText.DOFade(duration: 1, endValue: 0))
+            .Append(warningText.DOFade(duration: 0.25f, endValue: 1))
+            .Append(warningText.DOFade(duration: 0.25f, endValue: 0))
             .AppendCallback(() => warningText.gameObject.SetActive(false));
     }
 
