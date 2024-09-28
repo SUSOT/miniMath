@@ -192,7 +192,7 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < playerCard.Length; i++)
         {
-            if(playerCard[i].isCorrectAnswer)
+            //if(playerCard[i].isCorrectAnswer)
 
         }
     }
