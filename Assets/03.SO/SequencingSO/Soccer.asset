@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96a3593eb9bb3848bafaeb697d4004a, type: 3}
+  m_Name: Soccer
+  m_EditorClassIdentifier: 
+  miniGameSituationPrefab: {fileID: 3546442437005828281, guid: 16159906f3d162346b59670cfdc97dff,
+    type: 3}
+  backGroundBGM: {fileID: 8300000, guid: f486c303b2d1e814ea50737516978060, type: 3}
