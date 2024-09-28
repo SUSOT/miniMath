@@ -12,7 +12,7 @@ public class CountDownTimer : MonoBehaviour
     public UnityEvent TimeOver;
 
 
-    private void Start()
+    public void TimerStart()
     {
         _timerSlider.maxValue = _coolDownTime;
         _currentTime = _coolDownTime;
