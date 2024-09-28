@@ -7,4 +7,6 @@ public class CardSO : ScriptableObject
 {
     public Sprite cardImage;
     public string teamName;
+
+    public int score;
 }
