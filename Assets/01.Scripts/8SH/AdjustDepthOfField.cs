@@ -18,14 +18,14 @@ public class AdjustDepthOfField : MonoBehaviour
         {
             depthOfField = DOF;
         }
-        depthOfField.focalLength.value = 0;
+        depthOfField.focalLength.value = 170;
     } 
 
     public  void Adjust()
     {
         if (depthOfField)
         {
-            DOTween.To(() => 0, x => depthOfField.focalLength.value = x, 200, 1).Play();
+            DOTween.To(() => 0, x => depthOfField.focalLength.value = x, 0, 3).Play();
         }
     }
 }

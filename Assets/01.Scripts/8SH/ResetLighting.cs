@@ -8,7 +8,6 @@ public class ResetLighting : MonoBehaviour
     {
         Soccer,
         Gacha,
-        Line,
         Null,
     }
 
@@ -21,18 +20,15 @@ public class ResetLighting : MonoBehaviour
         {
             case EnvironmentType.Soccer:
                 RenderSettings.skybox = SkyMaterial;
-                RenderSettings.ambientLight = Color.cyan;
+                RenderSettings.ambientLight = new Color(195f / 255f, 1,1);
                 RenderSettings.fogColor = Color.white;
+                RenderSettings.fogDensity = 0f;
                 break;
             case EnvironmentType.Gacha:
                 RenderSettings.skybox = SkyMaterial;
                 RenderSettings.ambientLight = Color.black;
                 RenderSettings.fogColor = Color.black;
-                break;
-            case EnvironmentType.Line:
-                RenderSettings.skybox = SkyMaterial;
-                RenderSettings.ambientLight = Color.black;
-                RenderSettings.fogColor = Color.black;
+                RenderSettings.fogDensity = 0f;
                 break;
             default:break;
         }
