@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.Playables;
 public class StartCutScene : MonoBehaviour
 {
     private PlayableDirector playableDirector;
+    public event Action OpenButtonEvent;
 
     private void OnEnable()
     {
@@ -19,6 +21,7 @@ public class StartCutScene : MonoBehaviour
         {
             playableDirector.Stop();
             GetComponent<MiniGameSetup>().StartGame();
+            OpenButtonEvent?.Invoke();
         }
     }
 }

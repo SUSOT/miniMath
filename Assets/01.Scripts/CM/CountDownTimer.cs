@@ -12,7 +12,7 @@ public class CountDownTimer : MonoBehaviour
     public UnityEvent TimeOver;
 
 
-    private void Start()
+    public void TimerStart()
     {
         _timerSlider.maxValue = _coolDownTime;
         _currentTime = _coolDownTime;
@@ -26,7 +26,7 @@ public class CountDownTimer : MonoBehaviour
             Debug.Log("TimeOVer");
             isInvoke = true;
         }
-        else
+        else if(_timerSlider.gameObject.activeSelf)
         {
             _currentTime -= Time.fixedDeltaTime;
         }

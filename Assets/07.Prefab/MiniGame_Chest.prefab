@@ -38092,8 +38092,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3088619497023743869}
-  - component: {fileID: 5378844310865433724}
   - component: {fileID: 5623486814639369221}
+  - component: {fileID: 6008636194351410758}
   m_Layer: 0
   m_Name: ChestRightAnswer
   m_TagString: Untagged
@@ -38116,19 +38116,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 755050870875518358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5378844310865433724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6164370028705154259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbee26e34e2594648aa15ab909b50fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutScene: {fileID: 5623486814639369221}
 --- !u!320 &5623486814639369221
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -38170,6 +38157,19 @@ PlayableDirector:
     value: {fileID: 6088056588983143197}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &6008636194351410758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164370028705154259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbee26e34e2594648aa15ab909b50fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutScene: {fileID: 5623486814639369221}
 --- !u!1 &6175876543492434160
 GameObject:
   m_ObjectHideFlags: 0
