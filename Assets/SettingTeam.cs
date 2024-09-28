@@ -38,5 +38,6 @@ public class SettingTeam : MonoBehaviour
             teamCard[count-1].SetActive(true);
         text.text = $"{currentNum}";
         prevNum = count;
+        GameManager.Instance.teamCount = count;
     }
 }

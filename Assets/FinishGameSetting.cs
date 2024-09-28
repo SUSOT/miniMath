@@ -5,19 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class FinishGameSetting : MonoBehaviour
 {
-    [SerializeField]
-    private SettingTeam settingTeam;
-    public CharacterImageChange[] characterImageChanges;
+    private TeamSignatureNumber[] teamSignatureNumbers;
+    private int teamCount;
 
+    [SerializeField]
+    private TextWarning textWarning;
 
     public void StartGame()
     {
-        GameManager.Instance.teamCount = settingTeam.currentNum;
+        teamCount = 0;
+        teamSignatureNumbers = GetComponentsInChildren<TeamSignatureNumber>();
 
-        foreach(CharacterImageChange imageChange in characterImageChanges)
+        foreach(TeamSignatureNumber teamSignature in teamSignatureNumbers)
         {
-            //GameManager.Instance.teamIcon.Add(imageChange.currentCardNum + 1, imageChange.characterImage.sprite);
+            print("포이치 들어옴");
+            teamCount++;
+            if (teamSignature.cardSO.teamName.Length < 1)
+            {
+                textWarning.WarningText("팀 이름을 정해주세요");
+                return;
+            }    
         }
-        SceneManager.LoadScene("MiniGame");
+        if(teamCount > 1)
+            SceneManager.LoadScene("MiniGame");
+        else
+            textWarning.WarningText("혼자서는 게임을 시작할 수 없습니다.");
     }
 }
