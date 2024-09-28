@@ -7,11 +7,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
 
     [Header("플레이어 1부터 순서대로 넣어야 정상작동 합니다!")]
-    [SerializeField]
-    private CardSO[] playerSO;
+    public CardSO[] playerSO;
 
-    [Header("아직 4명이 최대")]
-    public int maxPlayerCount;
+    [HideInInspector]
+    public int maxPlayerCount = 4;
 
     public Sprite[] teamsIcon;
 

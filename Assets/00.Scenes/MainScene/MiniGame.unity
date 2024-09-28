@@ -1504,8 +1504,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0572fd7c7c47ca47bcd8a560a7458e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: []
-  maxPlayerCount: 0
+  playerSO:
+  - {fileID: 11400000, guid: 10dae9bae5a112c40b4969bd57df035b, type: 2}
+  - {fileID: 11400000, guid: 7f89e8e8570505f4fa00cb4aebb7b17f, type: 2}
+  - {fileID: 11400000, guid: 330188440699471478e6cb1c5377b13c, type: 2}
+  - {fileID: 11400000, guid: 2f7ac54127f16874dab9e0db65c22386, type: 2}
+  maxPlayerCount: 4
   teamsIcon: []
   teamCount: 4
 --- !u!4 &543674270
@@ -1590,7 +1594,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9e23ed5f1ae84aafb6e8d9098a63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCard: []
+  problemList: {fileID: 11400000, guid: 0dbecdd8a78c1504395988b5901600c8, type: 2}
+  mainText: {fileID: 0}
 --- !u!4 &822424018
 Transform:
   m_ObjectHideFlags: 0
