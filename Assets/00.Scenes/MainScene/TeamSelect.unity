@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -893,6 +893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
+      propertyPath: m_CharacterLimit
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
@@ -3209,6 +3214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
+      propertyPath: m_CharacterLimit
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4578,6 +4588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
+      propertyPath: m_CharacterLimit
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -5481,6 +5496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
+      propertyPath: m_CharacterLimit
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2736814482907258036, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
