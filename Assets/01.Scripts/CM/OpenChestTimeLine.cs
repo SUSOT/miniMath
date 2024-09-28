@@ -6,11 +6,18 @@ using UnityEngine.UI;
 
 public class OpenChestTimeLine : MonoBehaviour
 {
-    public PlayableDirector cutScene;
+    public PlayableDirector currentCutScene;
+
+    public PlayableAsset firstAnswer;
+    public PlayableAsset secondAnswer;
+    public PlayableAsset thirdAnswer;
 
     private void OnEnable()
     {
-        FindAnyObjectByType<OrderManager>().answerRevealed = cutScene;
+        //GameManager.Instance
+        currentCutScene = GetComponent<PlayableDirector>();
+        currentCutScene.playableAsset = firstAnswer;
+        FindAnyObjectByType<OrderManager>().answerRevealed = currentCutScene;
     }
 
     //private void Start()

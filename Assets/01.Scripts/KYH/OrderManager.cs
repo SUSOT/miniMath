@@ -11,7 +11,7 @@ public class OrderManager : MonoBehaviour
     [SerializeField]
     private CountDownTimer countDownTimer;
 
-    private CardSO[] playerCard;
+    public CardSO[] playerCard;
 
     [SerializeField]
     private ProblemList problemList;
@@ -52,14 +52,14 @@ public class OrderManager : MonoBehaviour
     {
         playerCard = GameManager.Instance.playerSO;
         maxTeamCount = GameManager.Instance.teamCount;
-        for(int i =0; i<playerCard.Length; i++)
+        for (int i = 0; i < playerCard.Length; i++)
         {
             playerCard[i].isCorrectAnswer = false;
             playerCard[i].score = 0;
         }
     }
 
-    
+
     public void SolveStart()
     {
         GetProblem();
@@ -143,23 +143,22 @@ public class OrderManager : MonoBehaviour
     {
         print("정답");
         CorrectAnswerAnimation();
-        correctChoosePanel.SetActive(true);
         currentOrder.isCorrectAnswer = true;
         OrderEnd();
     }
 
     private void OrderEnd()
     {
-        if (orderCount < maxTeamCount-1)
+        if (orderCount < maxTeamCount - 1)
         {
             orderCount++;
             OrderChange();
         }
         else
-            GameEnd();
+            AnswerRevealed();
     }
 
-    private void GameEnd()
+    private void AnswerRevealed()
     {
         orderCount = 0;
         currentOrderText.text = "정답은!!";
@@ -176,24 +175,75 @@ public class OrderManager : MonoBehaviour
 
     private IEnumerator RevealedRoutine()
     {
-        yield return new WaitForSeconds(3);
         answerRevealed.Play();
-        if (answerRevealed.duration < answerRevealed.time + 0.1f)
-        {
-            answerRevealed.Stop();
-            revealedTeamIcon.SetActive(true);
-            revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeIn();
-        }
+        yield return new WaitForSeconds((float)answerRevealed.duration);
+        print("정답공개 끝");
+        answerRevealed.Stop();
+        revealedTeamIcon.SetActive(true);
+        revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeIn();
         yield return new WaitForSeconds(2);
         AnswerRightTeams();
     }
 
     private void AnswerRightTeams()
     {
+        currentOrderText.text = "";
         for (int i = 0; i < playerCard.Length; i++)
         {
-            //if(playerCard[i].isCorrectAnswer)
-
+            if (playerCard[i].isCorrectAnswer)
+            {
+                print($"{playerCard[i].teamName}팀 정답");
+                ItemManager.Instance.revealedPlayers.Add(playerCard[i]);
+            }
         }
+        RevealedTemasChooseTime();
+        ItemManager.Instance.orderNum = 0;
+    }
+
+    private void RevealedTemasChooseTime()
+    {
+        if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count -1)
+        {
+            GameEnd();
+        }
+        else
+        {
+            correctChoosePanel.SetActive(true);
+            ItemManager.Instance.SetOrderTeams();
+        }
+    }
+
+    public void ScoreSelect()
+    {
+        correctChoosePanel.SetActive(false);
+        ItemManager.Instance.orderPlayer.score += 200;
+        ItemManager.Instance.orderNum++;
+        ItemManager.Instance.SetOrderTeams();
+        ScoreUp();
+    }
+
+    private void ScoreUp()
+    {
+        RevealedTemasChooseTime();
+    }
+
+    public void ItemSelect()
+    {
+        correctChoosePanel.SetActive(false);
+        ItemManager.instance.randItem = Random.Range(0, ItemManager.instance.ItemList.Count);
+        revealedTeamIcon.SetActive(false);
+        ItemManager.instance.ItemList[ItemManager.instance.randItem].SetActive(true);
+        ItemManager.Instance.orderNum++;
+        ItemManager.Instance.SetOrderTeams();
+    }
+
+    public void ItemUsed()
+    {
+        RevealedTemasChooseTime();
+    }
+
+    private void GameEnd()
+    {
+        print("게임끝");
     }
 }

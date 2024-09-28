@@ -6,14 +6,13 @@ using UnityEngine.Playables;
 
 public class StartCutScene : MonoBehaviour
 {
+    [SerializeField]
     private PlayableDirector playableDirector;
     public event Action OpenButtonEvent;
 
-    private OrderManager orderManager;
 
     private void OnEnable()
     {
-        playableDirector = GetComponentInChildren<PlayableDirector>();
         playableDirector.Play();
     }
 
@@ -21,6 +20,7 @@ public class StartCutScene : MonoBehaviour
     {
         if (playableDirector.duration < playableDirector.time + 0.1f)
         {
+            print("문제풀이 시작");
             playableDirector.Stop();
             GetComponent<MiniGameSetup>().StartGame();
             OpenButtonEvent?.Invoke();
