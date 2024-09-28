@@ -6,10 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
 
-    [HideInInspector]
+    [Header("현재 참여한 팀수")]
     public int teamCount;
+
+    [Header("현재 참여한 팀이름")]
     public string[] teamsName;
-    public Dictionary<int,Sprite> teamsIcon = new Dictionary<int, Sprite>();
+
+
+    [Header("현재 참여한 팀아이콘")]
+    public Dictionary<int, Sprite> teamIcon = new Dictionary<int, Sprite>();
 
 
     private void Awake()

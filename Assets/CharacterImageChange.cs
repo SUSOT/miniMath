@@ -12,15 +12,17 @@ public class CharacterImageChange : MonoBehaviour
     private List<Sprite> spriteList = new();
     private int currentSprite;
 
+    private TeamSignatureNumber signature;
 
     private void Awake()
     {
         characterImage= GetComponent<Image>();
+        signature = transform.parent.GetComponent<TeamSignatureNumber>();
     }
 
     private void Start()
     {
-        foreach(Sprite sprite in characterImageSO.characterImage)
+        foreach (Sprite sprite in characterImageSO.characterImage)
         {
             spriteList.Add(sprite);
         }
@@ -28,6 +30,12 @@ public class CharacterImageChange : MonoBehaviour
         characterImage.sprite = spriteList[0];
         currentCardNum = int.Parse(gameObject.name.Substring(0, 1));
         print(currentCardNum);
+        signature.cardSO.cardImage = characterImage.sprite;
+    }
+
+    private void OnDisable()
+    {
+        signature.cardSO.cardImage = null;
     }
 
     public void RightSlide()
@@ -53,5 +61,6 @@ public class CharacterImageChange : MonoBehaviour
     private void ChangeSpriteImage(int count)
     {
         characterImage.sprite = spriteList[count];
+        signature.cardSO.cardImage = characterImage.sprite;
     }
 }
