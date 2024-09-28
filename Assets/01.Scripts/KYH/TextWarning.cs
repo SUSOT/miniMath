@@ -7,16 +7,24 @@ using DG.Tweening;
 public class TextWarning : MonoBehaviour
 {
     public TextMeshProUGUI warningText;
+    Sequence _seq;
+
     public void WarningText(string text)
     {
+        warningText.gameObject.SetActive(true);
         warningText.text = text;
-        StartCoroutine(TextFadeRoutine());
+        SafeKill(_seq);
+
+        _seq = DOTween.Sequence()
+            .Append(warningText.DOFade(duration: 1, endValue: 1))
+            .Append(warningText.DOFade(duration: 1, endValue: 0))
+            .AppendCallback(() => warningText.gameObject.SetActive(false));
     }
 
-    private IEnumerator TextFadeRoutine()
+
+    public void SafeKill(Tween tween)
     {
-        warningText.DOFade(1,1);
-        yield return new WaitForSeconds(2f);
-        warningText.DOFade(0, 1);
+        if (tween is not null && tween.IsActive())
+            tween.Complete();
     }
 }
