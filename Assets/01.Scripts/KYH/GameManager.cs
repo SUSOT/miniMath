@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     [Header("현재 참여한 팀수")]
     public int teamCount;
 
+    public bool isTest;
+    public Sprite testImage;
+    public GameObject testForInSO;
+
     private void Awake()
     {
         teamsIcon = new Sprite[maxPlayerCount];
@@ -27,6 +31,18 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        if(isTest)
+        {
+            testForInSO.SetActive(true);
+            for (int i = 0; i < teamCount; i++)
+            {
+                teamsIcon[i] = testImage;
+            }
         }
     }
 

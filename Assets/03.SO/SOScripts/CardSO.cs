@@ -9,4 +9,5 @@ public class CardSO : ScriptableObject
     public string teamName;
 
     public int score;
+    public bool isCorrectAnswer;
 }

@@ -6,10 +6,9 @@ using TMPro;
 public class AnswerTimerCountDown : MonoBehaviour
 {
     [Header("제한시간")]
-    [SerializeField]
-    private float timeLimit;
+    public float timeLimit;
 
-    private float currentTime;
+    public float currentTime;
 
     [SerializeField]
     private TextMeshProUGUI timerText;
