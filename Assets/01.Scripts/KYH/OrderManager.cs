@@ -17,69 +17,112 @@ public class OrderManager : MonoBehaviour
 
     private ProblemSO currentProblem;
 
-    private int teamCount;
+    private int orderCount;
     private int maxTeamCount;
 
 
     [SerializeField]
     private TextMeshProUGUI mainText;
+    [SerializeField]
+    private TextMeshProUGUI currentOrderText;
+    [SerializeField]
+    private GameObject answerTimerText;
+
+    [SerializeField]
+    private GameObject correctChoosePanel;
 
 
-    //private void Start()
-    //{
-    //    playerCard = GameManager.Instance.playerSO;
-    //    maxTeamCount = GameManager.Instance.teamCount;
-    //    StartSolve();
-    //}
+    private CardSO currentOrder;
 
-    //public void SolveStart()
-    //{
-    //    GetProblem();
-    //    countDownTimer.gameObject.SetActive(true);
-    //    countDownTimer.TimerStart();
-    //}
 
-    //public void SolveEnd() // 타이머 끝나면
-    //{
-    //    countDownTimer.gameObject.SetActive(false);
-    //    AnswerStartAnimation();
-    //    teamCount = 1;
-    //    OrderChange();
-    //}
+    private void Start()
+    {
+        playerCard = GameManager.Instance.playerSO;
+        maxTeamCount = GameManager.Instance.teamCount;
+        SolveStart();
+    }
 
-    //private void AnswerStartAnimation()
-    //{
+    public void SolveStart()
+    {
+        GetProblem();
+        countDownTimer.gameObject.SetActive(true);
+        countDownTimer.TimerStart();
+    }
 
-    //}
+    public void SolveEnd() // 타이머 끝나면
+    {
+        countDownTimer.gameObject.SetActive(false);
+        AnswerStartAnimation();
+        orderCount = 1;
+        OrderChange();
+        mainText.text = "";
+    }
 
-    //private void OrderChange()
-    //{
-    //    currentProblem = playerCard[teamCount];
-    //    { 팀이름 텍스트 바꿔주기}
-    //    선택 차례
-    //    문제 선택 타이머 시작
-    //}
+    private void GetProblem()
+    {
+        int rand = Random.Range(0, problemList.problemSO.Count);
+        currentProblem = problemList.problemSO[rand];
 
-    //private void GetProblem()
-    //{
-    //    int rand = Random.Range(0, problemList.problemSO.Count);
-    //    currentProblem = problemList.problemSO[rand];
-    //    //문제 세팅
-    //    mainText.text = "어떤 것이 정답일까요??";
-    //}
+        //문제 세팅
+        mainText.text = "어떤 것이 정답일까요??";
+    }
 
-    //private void TimerEnd()
-    //{
-    //    WrongAnswer();
-    //}
+    private void AnswerStartAnimation()
+    {
 
-    //public void WrongAnswer()
-    //{
+    }
 
-    //}
+    private void OrderChange()
+    {
+        currentOrder = playerCard[orderCount];
+        currentOrderText.text = $"{currentOrder.teamName}팀의 차례!";
+        answerTimerText.SetActive(true);
+    }
 
-    //public void CorrectAnswer()
-    //{
 
-    //}
+    public void TimerEnd() //문제 선택 타이머 끝
+    {
+        answerTimerText.SetActive(false);
+        WrongAnswer();
+    }
+
+    public void WrongAnswer()
+    {
+        print("오답");
+        currentOrder.score -= 50;
+        WrongAnswerAnimation();
+        OrderEnd();
+    }
+
+    private void WrongAnswerAnimation()
+    {
+
+    }
+    private void CorrectAnswerAnimation()
+    {
+
+    }
+
+    public void CorrectAnswer()
+    {
+        print("정답");
+        CorrectAnswerAnimation();
+        correctChoosePanel.SetActive(true);
+    }
+
+    private void OrderEnd()
+    {
+        if (orderCount < maxTeamCount)
+            orderCount++;
+        else
+            GameEnd();
+        OrderChange();
+    }
+
+    private void GameEnd()
+    {
+        orderCount = 0;
+        //"다음문제는 과연!!" 띄우기
+        //다음 미니게임 뽑기
+    }
 }
