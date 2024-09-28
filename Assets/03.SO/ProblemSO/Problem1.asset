@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ff0c43fc98e4a4bb2d4ea4bccc477b, type: 3}
-  m_Name: ProblemList
+  m_Script: {fileID: 11500000, guid: 36f31d3c7f6f69346bb6f5f9f837a56a, type: 3}
+  m_Name: Problem1
   m_EditorClassIdentifier: 
-  problemSO:
-  - {fileID: 11400000, guid: 16ef5eebc52d91e47beb6e5c94235e06, type: 2}
-  - {fileID: 11400000, guid: 16ef5eebc52d91e47beb6e5c94235e06, type: 2}
+  whatIsProblem: "1+1\uC740?"
+  CorrectAnswer: "\uADC0\uC5EC\uBBF8"
+  secondWrongAnswer: 2
+  firstWrongAnswer: "\uCC3D\uBB38"

@@ -34,8 +34,13 @@ public class OrderManager : MonoBehaviour
 
     private CardSO currentOrder;
 
+    public List<Transform> randAnswerButtonPos = new List<Transform>();
 
-    private void Start()
+    public GameObject correctAnswer;
+    public GameObject wrongAnswer;
+    public GameObject wrongAnswer2;
+
+    private void Awake()
     {
         playerCard = GameManager.Instance.playerSO;
         maxTeamCount = GameManager.Instance.teamCount;
@@ -64,7 +69,19 @@ public class OrderManager : MonoBehaviour
         currentProblem = problemList.problemSO[rand];
 
         //문제 세팅
+        SettingProblem();
+
         mainText.text = "어떤 것이 정답일까요??";
+    }
+
+    private void SettingProblem() //얘는 짜침
+    {
+        correctAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.CorrectAnswer;
+        wrongAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.firstWrongAnswer;
+        wrongAnswer2.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.secondWrongAnswer;
+
+        //Transform[] transforms = { correctAnswer.transform, wrongAnswer.transform, wrongAnswer2.transform };
+
     }
 
     private void AnswerStartAnimation()
