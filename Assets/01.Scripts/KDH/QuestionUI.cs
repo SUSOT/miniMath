@@ -7,39 +7,47 @@ public class QuestionUI : MonoBehaviour
     public CanvasGroup uiCanvasGroup;
     public RectTransform uiCanvasTransform;
     private bool isVisible = false;
-
+    private bool isAnimatingUI = false;
     void Start()
     {
-        uiCanvasTransform.anchoredPosition = new Vector2(Screen.width, 0);
+        uiCanvasTransform.anchoredPosition = new Vector2(0, -Screen.height);
         uiCanvasGroup.interactable = false;
         uiCanvasGroup.blocksRaycasts = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !isAnimatingUI)
         {
             if (isVisible)
             {
-                StartCoroutine(HandleInput());
-                uiCanvasTransform.DOAnchorPosX(Screen.width, 1f).SetEase(Ease.OutSine);
-                uiCanvasGroup.interactable = false;
-                uiCanvasGroup.blocksRaycasts = false;
+                StartCoroutine(HandleBounceEffect(-Screen.height));
                 isVisible = false;
             }
             else
             {
-                StartCoroutine(HandleInput());
-                uiCanvasTransform.DOAnchorPosX(0, 1f).SetEase(Ease.OutSine);
-                uiCanvasGroup.interactable = true;
-                uiCanvasGroup.blocksRaycasts = true;
+                StartCoroutine(HandleBounceEffect(0));
                 isVisible = true;
             }
         }
     }
 
-    private IEnumerator HandleInput()
+    private IEnumerator HandleBounceEffect(float targetPosY)
     {
+        isAnimatingUI = true;
+        uiCanvasGroup.interactable = false;
+        uiCanvasGroup.blocksRaycasts = false;
+
+        uiCanvasTransform.DOAnchorPosY(targetPosY, 1f).SetEase(Ease.OutBounce);
+
         yield return new WaitForSeconds(1f);
+
+        if (targetPosY == 0)
+        {
+            uiCanvasGroup.interactable = true;
+            uiCanvasGroup.blocksRaycasts = true;
+        }
+
+        isAnimatingUI = false;
     }
 }
