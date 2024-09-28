@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1018,7 +1018,7 @@ PrefabInstance:
     - target: {fileID: 4487282123820041552, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1084.8325
+      value: 1162.04
       objectReference: {fileID: 0}
     - target: {fileID: 4487282123820041552, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
@@ -3331,7 +3331,7 @@ PrefabInstance:
     - target: {fileID: 4487282123820041552, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 464.64252
+      value: 420.68
       objectReference: {fileID: 0}
     - target: {fileID: 4487282123820041552, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
@@ -4700,7 +4700,7 @@ PrefabInstance:
     - target: {fileID: 4487282123820041552, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 774.7375
+      value: 791.36
       objectReference: {fileID: 0}
     - target: {fileID: 4487282123820041552, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
@@ -5314,7 +5314,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 443}
-  m_SizeDelta: {x: 939.38, y: 652.6899}
+  m_SizeDelta: {x: 900, y: 652.6899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044974899
 MonoBehaviour:
@@ -5334,7 +5334,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 1
+  m_Spacing: 270.68
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
