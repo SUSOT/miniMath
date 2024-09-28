@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
 
     [Header("현재 참여한 팀아이콘")]
-    public List<Sprite> teamIcon = new List<Sprite>();
+    public Dictionary<int, Sprite> teamIcon = new Dictionary<int, Sprite>();
 
 
     private void Awake()
