@@ -2,33 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemFunctions : MonoBehaviour
+public class ItemFunctions
 {
-    public void MyScoreUp()
+    public void MyScoreUpMethod()
     {
-
+        Debug.Log("1");
     }
-    public void MyScoreDown()
+    public void MyScoreDownMethod()
     {
-
+        Debug.Log("2");
     }
-    public void AnotherScoreUp()
+    public void AnotherScoreUpMethod()
     {
-
-    }public void AnotherScoreDown()
-    {
-
+        Debug.Log("3");
     }
-    public void EveryScoreUp()
+    public void AnotherScoreDownMethod()
     {
-
+        Debug.Log("4");
     }
-    public void EveryScoreDown()
+    public void EveryScoreUpMethod()
     {
-
+        Debug.Log("1");
     }
-    public void DoubleScore()
+    public void EveryScoreDownMethod()
     {
-
+        Debug.Log("5");
+    }
+    public void DoubleScoreMethod()
+    {
+        Debug.Log("6");
     }
 }
