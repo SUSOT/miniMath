@@ -13,6 +13,8 @@ public class TeamSettingManager : MonoBehaviour
         for (int j = 0; j <= GameManager.Instance.teamCount - 1; j++)
         {
             playerCard[j].SetActive(true);
+            playerCard[j].GetComponentInChildren<SetTemaImage>()
+                .SetTeamImage(GameManager.Instance.teamsIcon[j]);
         }
     }
 }

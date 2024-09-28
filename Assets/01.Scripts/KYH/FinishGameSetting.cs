@@ -27,7 +27,10 @@ public class FinishGameSetting : MonoBehaviour
             }    
         }
         if(teamCount > 1)
+        {
+            GameManager.Instance.TeamIconSet();
             SceneManager.LoadScene("MiniGame");
+        }
         else
             textWarning.WarningText("혼자서는 게임을 시작할 수 없습니다.");
     }

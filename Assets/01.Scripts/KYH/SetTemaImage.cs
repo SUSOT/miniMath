@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class SetTemaImage : MonoBehaviour
 {
-    public CardSO cardSO;
+    [Header("본인 자식으로 있는 친구")]
+    public Image teamIcon;
 
-    private void OnEnable()
+    public void SetTeamImage(Sprite sprite)
     {
-        GetComponentInChildren<Image>().sprite = cardSO.cardImage;
+        teamIcon.sprite = sprite;
     }
 }
