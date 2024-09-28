@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfe7ff64538440f488cb9ac6951a9a48
+guid: 3ed6b239784a0554788a8191357fbb2c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RightLeft_0
+      name: PlusMinus_0
       rect:
         serializedVersion: 2
-        x: 94
-        y: 189
-        width: 171
-        height: 129
+        x: 26
+        y: 35
+        width: 303
+        height: 302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b085b79b805cfb4fbf7319c3f5947df
-      internalID: -253303995
+      spriteID: 4faa151263c68a24d9a431c7d31bba7f
+      internalID: -1820127754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RightLeft_1
+      name: PlusMinus_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 47
-        width: 171
-        height: 129
+        x: 354
+        y: 35
+        width: 302
+        height: 302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f401dea43d657d4995e519b1bbf359d
-      internalID: 799651758
+      spriteID: d0392e1f6ecfd47489e53388e0752603
+      internalID: -781021871
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f534ccc1f7f05384ab28356eb538ad73
+    spriteID: 7e3858572425cef47baf943b74fbfdf1
     internalID: 0
     vertices: []
     indices: 
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RightLeft_0: -253303995
-      RightLeft_1: 799651758
+      PlusMinus_0: -1820127754
+      PlusMinus_1: -781021871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
