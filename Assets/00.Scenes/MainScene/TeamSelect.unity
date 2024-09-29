@@ -889,6 +889,11 @@ PrefabInstance:
       propertyPath: m_UseSpriteMesh
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652637321935864067, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
+      propertyPath: textMesh
+      value: 
+      objectReference: {fileID: 167151355}
     - target: {fileID: 2489551379322196889, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
       propertyPath: m_text
@@ -1783,6 +1788,9 @@ MonoBehaviour:
   maxPlayerCount: 4
   teamsIcon: []
   teamCount: 0
+  isTest: 0
+  testImage: {fileID: 0}
+  testForInSO: {fileID: 0}
 --- !u!4 &844207459
 Transform:
   m_ObjectHideFlags: 0
@@ -3209,6 +3217,11 @@ PrefabInstance:
       propertyPath: m_UseSpriteMesh
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652637321935864067, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
+      propertyPath: textMesh
+      value: 
+      objectReference: {fileID: 1664650091}
     - target: {fileID: 2489551379322196889, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
       propertyPath: m_text
@@ -4583,6 +4596,11 @@ PrefabInstance:
       propertyPath: m_UseSpriteMesh
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652637321935864067, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
+      propertyPath: textMesh
+      value: 
+      objectReference: {fileID: 1694779970}
     - target: {fileID: 2489551379322196889, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
       propertyPath: m_text
@@ -5653,6 +5671,11 @@ PrefabInstance:
       propertyPath: m_UseSpriteMesh
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652637321935864067, guid: ad966a73c4fb26246b7b9515b1f61d69,
+        type: 3}
+      propertyPath: textMesh
+      value: 
+      objectReference: {fileID: 1406973964}
     - target: {fileID: 2489551379322196889, guid: ad966a73c4fb26246b7b9515b1f61d69,
         type: 3}
       propertyPath: m_text

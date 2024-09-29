@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterImageChange : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class CharacterImageChange : MonoBehaviour
     public CharacterImageSO characterImageSO;
     private List<Sprite> spriteList = new();
     private int currentSprite;
+
+    [SerializeField]
+    private TextMeshProUGUI textMesh;
 
     private TeamSignatureNumber signature;
 
@@ -31,6 +35,7 @@ public class CharacterImageChange : MonoBehaviour
         currentCardNum = int.Parse(gameObject.name.Substring(0, 1));
         print(currentCardNum);
         signature.cardSO.cardImage = characterImage.sprite;
+        textMesh.text = characterImageSO.characterImageName[0];
     }
 
     private void OnDisable()
@@ -62,5 +67,6 @@ public class CharacterImageChange : MonoBehaviour
     {
         characterImage.sprite = spriteList[count];
         signature.cardSO.cardImage = characterImage.sprite;
+        textMesh.text = characterImageSO.characterImageName[count];
     }
 }

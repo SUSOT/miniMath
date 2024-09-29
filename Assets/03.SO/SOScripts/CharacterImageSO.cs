@@ -6,4 +6,5 @@ using UnityEngine;
 public class CharacterImageSO : ScriptableObject
 {
     public List<Sprite> characterImage = new List<Sprite>();
+    public List<string> characterImageName = new List<string>();
 }
