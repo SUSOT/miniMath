@@ -6,8 +6,9 @@ using UnityEngine.Audio;
 //사운드의 타입이다. 사운드를 중단을 식별하기위해 사용한다.
 public enum SoundType
 {
+    Master,
     BGM,
-    FBX
+    SFX
 }
 
 
@@ -103,7 +104,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="clipName">오디오 클립 이름</param>
     /// <param name="type">오디오 유형(BGM, EFFECT 등.)</param>
-    public void PlaySound2D(string clipName, float delay = 0f, bool isLoop = false, SoundType type = SoundType.FBX)
+    public void PlaySound2D(string clipName, float delay = 0f, bool isLoop = false, SoundType type = SoundType.SFX)
     {
         GameObject obj = new GameObject("TemporarySoundPlayer 2D");
         TemporarySoundPlayer soundPlayer = obj.AddComponent<TemporarySoundPlayer>();
@@ -124,7 +125,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="attachToTarget"></param>
     /// <param name="minDistance"></param>
     /// <param name="maxDistance"></param>
-    public void PlaySound3D(string clipName, Transform audioTarget, float delay = 0f, bool isLoop = false, SoundType type = SoundType.FBX, bool attachToTarget = true, float minDistance = 0.0f, float maxDistance = 50.0f)
+    public void PlaySound3D(string clipName, Transform audioTarget, float delay = 0f, bool isLoop = false, SoundType type = SoundType.SFX, bool attachToTarget = true, float minDistance = 0.0f, float maxDistance = 50.0f)
     {
         GameObject obj = new GameObject("TemporarySoundPlayer 3D");
         obj.transform.localPosition = audioTarget.transform.position;
@@ -140,10 +141,10 @@ public class AudioManager : MonoBehaviour
     }
 
     //씬이 로드될 때 옵션 매니저에의해 모든 사운드 불륨을 저장된 옵션의 크기로 초기화시키는 함수.
-    public void InitVolumes(float bgm, float fbx)
+    public void InitVolumes(float bgm, float sfx)
     {
         SetVolume(SoundType.BGM, bgm);
-        SetVolume(SoundType.FBX, fbx);
+        SetVolume(SoundType.SFX, sfx);
     }
 
     //옵션을 변경할 때 소리의 불륨을 조절하는 함수

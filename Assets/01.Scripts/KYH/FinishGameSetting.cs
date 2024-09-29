@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class FinishGameSetting : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject teamIcon;
+
     private TeamSignatureNumber[] teamSignatureNumbers;
     private int teamCount;
 
@@ -14,7 +17,7 @@ public class FinishGameSetting : MonoBehaviour
     public void StartGame()
     {
         teamCount = 0;
-        teamSignatureNumbers = GetComponentsInChildren<TeamSignatureNumber>();
+        teamSignatureNumbers = teamIcon.GetComponentsInChildren<TeamSignatureNumber>();
 
         foreach(TeamSignatureNumber teamSignature in teamSignatureNumbers)
         {

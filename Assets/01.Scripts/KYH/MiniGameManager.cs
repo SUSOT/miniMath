@@ -10,10 +10,10 @@ public class MiniGameManager : MonoBehaviour
 
     private GameObject gameSequencing = null;
 
-    //private void Start()
-    //{
-    //    StartMiniGame();
-    //}
+    private void Start()
+    {
+        StartMiniGame();
+    }
 
     public void StartMiniGame()
     {

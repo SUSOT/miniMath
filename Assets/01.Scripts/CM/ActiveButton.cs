@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ActiveButton : MonoBehaviour{
-    [FormerlySerializedAs("ButtonParents")] [SerializeField] private GameObject _buttonParents;
+public class ActiveButton : MonoBehaviour
+{
+    [FormerlySerializedAs("ButtonParents")]
+    [SerializeField] private GameObject _buttonParents;
     [SerializeField] private GameObject _sliderAndBtn;
 
     public void Activebutton(){

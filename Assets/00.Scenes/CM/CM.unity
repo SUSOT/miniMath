@@ -1220,8 +1220,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284324883}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16258015, y: 0, z: 0, w: 0.98669535}
-  m_LocalPosition: {x: 0, y: 499.07, z: 2.7600002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.82, y: 6.679, z: -15.884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1501,7 +1501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &289516894
 Transform:
   m_ObjectHideFlags: 0
@@ -3173,7 +3173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9835c234d329a7e4cbfeb16e640f8719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 132545077}
 --- !u!1 &674191890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,6 +5316,11 @@ MonoBehaviour:
   - {fileID: 903943725}
   - {fileID: 88849896}
   - {fileID: 473068056}
+  revealedPlayers: []
+  randItem: 0
+  orderPlayer: {fileID: 0}
+  orderNum: 0
+  text: {fileID: 0}
 --- !u!1 &1244464431
 GameObject:
   m_ObjectHideFlags: 0
@@ -5352,7 +5356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -910, y: -490}
+  m_AnchoredPosition: {x: -1118, y: -470}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244464433
@@ -6019,6 +6023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9d0d626c3c53045897fa96654f3b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _orderManager: {fileID: 0}
+  AddScore: c80000006400000096000000c8000000c800000064000000
 --- !u!1 &1632057034
 GameObject:
   m_ObjectHideFlags: 0

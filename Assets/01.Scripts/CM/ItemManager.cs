@@ -2,12 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ItemManager : MonoBehaviour
 {
     public static ItemManager instance = null;
 
     public List<GameObject> ItemList = new List<GameObject>();
+
+    public List<CardSO> revealedPlayers = new List<CardSO>();
+
+    public int randItem;
+
+    [HideInInspector]
+    public CardSO orderPlayer;
+
+    [HideInInspector]
+    public int orderNum = 0;
+
+    [SerializeField]
+    private TextMeshProUGUI text;
 
     private void Awake()
     {
@@ -32,5 +46,12 @@ public class ItemManager : MonoBehaviour
             }
             return instance;
         }
+    }
+
+    public void SetOrderTeams()
+    {
+        orderPlayer = revealedPlayers[orderNum];
+        text.gameObject.SetActive(true);
+        text.text = $"{orderPlayer.teamName}ÆÀ Â÷·ÊÀÔ´Ï´Ù!";
     }
 }
