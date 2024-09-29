@@ -14,7 +14,6 @@ public class ChangeTutorial : MonoBehaviour
         {
             _tutorial.transform.DOMoveX(_tutorial.transform.position.x -_moveValue, 0.5f);
             _curValue++;
-            Debug.Log("r");
         }
     }
     public void LeftMove()
@@ -23,12 +22,6 @@ public class ChangeTutorial : MonoBehaviour
         {
             _tutorial.transform.DOMoveX(_tutorial.transform.position.x + _moveValue, 0.5f);
             _curValue--;
-            Debug.Log("l");
         }
-    }
-
-    private void Update()
-    {
-        Debug.Log(_maxValue >= _curValue && _curValue > 0);
     }
 }
