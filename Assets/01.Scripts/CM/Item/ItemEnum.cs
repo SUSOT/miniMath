@@ -21,15 +21,18 @@ public class ItemEnum : MonoBehaviour
     Type type;
 
     private OrderManager orderManager;
+    private ItemFunctions itemFunctions;
 
 
     public void OnEnable()
     {
+        itemFunctions = GetComponentInParent<ItemFunctions>();
+        Debug.Log(itemFunctions);
         orderManager = FindAnyObjectByType<OrderManager>();
-        ItemFunctions itemFunction = new ItemFunctions();
+        
 
-        type = itemFunction.GetType();
-        type.GetMethod($"{items}Method").Invoke(itemFunction, null);
+        type = itemFunctions.GetType();
+        type.GetMethod($"{items}Method").Invoke(itemFunctions, null);
         orderManager.ItemUsed();
     }
 }

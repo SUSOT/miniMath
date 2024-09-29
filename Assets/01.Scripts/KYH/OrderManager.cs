@@ -19,7 +19,7 @@ public class OrderManager : MonoBehaviour
 
     private ProblemSO currentProblem;
 
-    private int orderCount;
+    public int orderCount { get; private set; }
     private int maxTeamCount;
 
 
@@ -108,6 +108,10 @@ public class OrderManager : MonoBehaviour
         correctAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.CorrectAnswer;
         wrongAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.firstWrongAnswer;
         wrongAnswer2.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.secondWrongAnswer;
+        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.whatIsProblem);
+        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.CorrectAnswer);
+        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.firstWrongAnswer);
+        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.secondWrongAnswer);
 
         RandomShuffle.GetRandomShuffleList(randAnswerButtonPos);
 

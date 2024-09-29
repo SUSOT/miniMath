@@ -1,43 +1,73 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class ItemFunctions : MonoBehaviour
 {
+    [SerializeField] private OrderManager _orderManager;
+    [SerializeField] private List<int> AddScore = new List<int>();
+    [SerializeField] private PlayableDirector _playableDirector;
 
     public void MyScoreUpMethod()
     {
-        ItemManager.Instance.orderPlayer.score += 500;//점수
-        //orderManager.ItemUsed();//끝
+        if(_playableDirector.duration < _playableDirector.time + 0.1f)
+        {
+            ItemManager.Instance.orderPlayer.score += AddScore[0];
+            StartCoroutine(CorAnim());
+        }
     }
     public void MyScoreDownMethod()
     {
-        ItemManager.Instance.orderPlayer.score += 500;//점수
-        //orderManager.ItemUsed();
+
+        if (_playableDirector.duration < _playableDirector.time + 0.1f)
+        {
+            ItemManager.Instance.orderPlayer.score -= AddScore[1];
+            _orderManager.ItemUsed();
+        }
     }
     public void AnotherScoreUpMethod()
     {
-        ItemManager.Instance.orderPlayer.score += 500;//점수
-        //orderManager.ItemUsed();
+        for (int i = 0; i < _orderManager.orderCount; i++)
+        {
+            if (i != _orderManager.orderCount)
+                _orderManager.playerCard[i].score += AddScore[2];
+        }
+        _orderManager.ItemUsed();
     }
     public void AnotherScoreDownMethod()
     {
-        ItemManager.Instance.orderPlayer.score += 500;//점수
-        //orderManager.ItemUsed();
+        for (int i = 0; i < _orderManager.orderCount; i++)
+        {
+            if (i != _orderManager.orderCount)
+                _orderManager.playerCard[i].score -= AddScore[3];
+        }
+        _orderManager.ItemUsed();
     }
     public void EveryScoreUpMethod()
     {
-        ItemManager.Instance.orderPlayer.score += 500;//점수
-        //orderManager.ItemUsed();
+        for (int i = 0; i < _orderManager.orderCount; i++)
+        {
+            _orderManager.playerCard[i].score += AddScore[4];
+        }
+        _orderManager.ItemUsed();
     }
     public void EveryScoreDownMethod()
     {
-        ItemManager.Instance.orderPlayer.score += 500;//점수
-        //orderManager.ItemUsed();
+        for (int i = 0; i < _orderManager.orderCount; i++)
+        {
+            _orderManager.playerCard[i].score -= AddScore[5];
+        }
+        _orderManager.ItemUsed();
     }
     public void DoubleScoreMethod()
     {
-        ItemManager.Instance.orderPlayer.score += 500;//점수
-        //orderManager.ItemUsed();
+        ItemManager.Instance.orderPlayer.score *= 2;//점수
+        _orderManager.ItemUsed();
+    }
+
+    private void CorAnim()
+    {
+
     }
 }
