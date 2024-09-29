@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
   m_Clip: {fileID: 7400000, guid: 850dca015c338c24c802f5e4e1d98b9f, type: 2}
-  m_Position: {x: -3, y: 0, z: -4.239}
+  m_Position: {x: 3, y: 0, z: -4.239}
   m_EulerAngles: {x: 0, y: -180, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: MiniGame_ChestgameTimelineAnswer2
+  m_Name: MiniGame_ChestgameTimelineAnswerRight
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
   m_Clip: {fileID: 7400000, guid: 850dca015c338c24c802f5e4e1d98b9f, type: 2}
-  m_Position: {x: 3, y: 0, z: -4.239}
+  m_Position: {x: -3, y: 0, z: -4.239}
   m_EulerAngles: {x: 0, y: -180, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
