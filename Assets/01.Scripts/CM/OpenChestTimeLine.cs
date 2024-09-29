@@ -8,16 +8,47 @@ public class OpenChestTimeLine : MonoBehaviour
 {
     public PlayableDirector currentCutScene;
 
-    public PlayableAsset firstAnswer;
-    public PlayableAsset secondAnswer;
-    public PlayableAsset thirdAnswer;
+    public PlayableAsset leftAnswer;
+    public PlayableAsset rightAnswer;
+    public PlayableAsset middleAnswer;
 
-    private void OnEnable()
+    private Correct correct;
+
+    private int pointPos;
+
+    private List<GameObject> answerPoint = new List<GameObject>();
+
+    public void TimeLine()
     {
-        //GameManager.Instance
+        OrderManager orderManager = FindAnyObjectByType<OrderManager>();
+        foreach (Transform answerPoints in orderManager.randAnswerButtonPos)
+        {
+            answerPoint.Add(answerPoints.gameObject);
+        }
+
+        for (int i = 0; i < answerPoint.Count; i++)
+        {
+            correct = answerPoint[i]?.GetComponentInChildren<Correct>();
+            print(correct);
+            if (correct != null)
+            {
+                pointPos = answerPoint[i].GetComponent<ProblemPoint>().point;
+            }
+            else
+                print(answerPoint[i] + "¾ê´Â ¾ø´Ù");
+        }
         currentCutScene = GetComponent<PlayableDirector>();
-        currentCutScene.playableAsset = firstAnswer;
-        FindAnyObjectByType<OrderManager>().answerRevealed = currentCutScene;
+
+        if (pointPos == 1)
+            currentCutScene.playableAsset = middleAnswer;
+        else if (pointPos == 2)
+            currentCutScene.playableAsset = leftAnswer;
+        else if (pointPos == 3)
+            currentCutScene.playableAsset = rightAnswer;
+
+
+        orderManager.answerRevealed = currentCutScene;
+    
     }
 
     //private void Start()
