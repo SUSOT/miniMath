@@ -3173,7 +3173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9835c234d329a7e4cbfeb16e640f8719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 132545077}
 --- !u!1 &674191890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,6 +5316,11 @@ MonoBehaviour:
   - {fileID: 903943725}
   - {fileID: 88849896}
   - {fileID: 473068056}
+  revealedPlayers: []
+  randItem: 0
+  orderPlayer: {fileID: 0}
+  orderNum: 0
+  text: {fileID: 0}
 --- !u!1 &1244464431
 GameObject:
   m_ObjectHideFlags: 0
@@ -5977,7 +5981,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1596920746}
-  - component: {fileID: 1596920747}
   m_Layer: 0
   m_Name: Items
   m_TagString: Untagged
@@ -6007,18 +6010,6 @@ Transform:
   - {fileID: 473068057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1596920747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596920745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9d0d626c3c53045897fa96654f3b7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1632057034
 GameObject:
   m_ObjectHideFlags: 0
