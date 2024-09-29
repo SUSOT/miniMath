@@ -12,8 +12,8 @@ public class ProblemSO : ScriptableObject
     public string CorrectAnswer;
 
     [Header("오답1")]
-    public string secondWrongAnswer;
+    public string firstWrongAnswer;
 
     [Header("오답2")]
-    public string firstWrongAnswer;
+    public string secondWrongAnswer;
 }
