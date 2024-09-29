@@ -1986,7 +1986,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5522673631465036580}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: bab80d2363ce609468adbe2c181883dd, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 8fe9c126f52e6344e9b84c11b9d3570e, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2067,9 +2067,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCutScene: {fileID: 0}
-  leftAnswer: {fileID: 0}
-  rightAnswer: {fileID: 0}
-  middleAnswer: {fileID: 0}
+  firstAnswer: {fileID: 11400000, guid: 8fe9c126f52e6344e9b84c11b9d3570e, type: 2}
+  secondAnswer: {fileID: 11400000, guid: bab80d2363ce609468adbe2c181883dd, type: 2}
+  thirdAnswer: {fileID: 11400000, guid: 0749d457b9fcf6e4fbc1d554e4603447, type: 2}
 --- !u!1 &5649887135826054507
 GameObject:
   m_ObjectHideFlags: 0
