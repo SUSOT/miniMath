@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 using TMPro;
+using System.Linq;
 
 public class OrderManager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class OrderManager : MonoBehaviour
 
     private CardSO currentOrder;
 
-    public List<Transform> randAnswerButtonPos = new List<Transform>();
+    public List<RectTransform> randAnswerButtonPos = new List<RectTransform>();
 
     public GameObject correctAnswer;
     public GameObject wrongAnswer;
@@ -47,6 +48,12 @@ public class OrderManager : MonoBehaviour
     public PlayableDirector answerRevealed;
 
     public GameObject revealedTeamIcon;
+
+    [SerializeField]
+    private GameObject[] answerButton;
+
+    private OpenChestTimeLine chestTimeLine;
+
 
     private void Awake()
     {
@@ -91,13 +98,24 @@ public class OrderManager : MonoBehaviour
         mainText.text = currentProblem.whatIsProblem;
     }
 
-    private void SettingProblem() //얘는 짜침
+    private void SettingProblem()
     {
+        for (int j = 0; j < answerButton.Length; j++)
+        {
+            answerButton[j].transform.SetParent(null);
+        }
+
         correctAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.CorrectAnswer;
         wrongAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.firstWrongAnswer;
         wrongAnswer2.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.secondWrongAnswer;
 
-        //Transform[] transforms = { correctAnswer.transform, wrongAnswer.transform, wrongAnswer2.transform };
+        RandomShuffle.GetRandomShuffleList(randAnswerButtonPos);
+
+        for (int i = 0; i < randAnswerButtonPos.Count; i++)
+        {
+            answerButton[i].transform.position = randAnswerButtonPos[i].position;
+            answerButton[i].transform.SetParent(randAnswerButtonPos[i]);
+        }
 
     }
 
@@ -167,22 +185,24 @@ public class OrderManager : MonoBehaviour
         correctAnswer.SetActive(false);
         wrongAnswer.SetActive(false);
         wrongAnswer2.SetActive(false);
+        chestTimeLine = FindAnyObjectByType<OpenChestTimeLine>();
+        chestTimeLine.TimeLine();
         StartCoroutine(RevealedRoutine());
-        //"다음문제는 과연!!" 띄우기
-        //다음 미니게임 뽑기
     }
 
 
     private IEnumerator RevealedRoutine()
     {
-        answerRevealed.Play();
-        yield return new WaitForSeconds((float)answerRevealed.duration);
-        print("정답공개 끝");
-        answerRevealed.Stop();
-        revealedTeamIcon.SetActive(true);
-        revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeIn();
-        yield return new WaitForSeconds(2);
-        AnswerRightTeams();
+        if (answerRevealed != null)
+        {
+            answerRevealed.Play();
+            yield return new WaitForSeconds(5f);
+            answerRevealed.Stop();
+            revealedTeamIcon.SetActive(true);
+            revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeIn();
+            yield return new WaitForSeconds(2);
+            AnswerRightTeams();
+        }
     }
 
     private void AnswerRightTeams()
@@ -245,5 +265,6 @@ public class OrderManager : MonoBehaviour
     private void GameEnd()
     {
         print("게임끝");
+        chestTimeLine = null;
     }
 }
