@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2601,6 +2601,7 @@ RectTransform:
   - {fileID: 1192489102}
   - {fileID: 1213164481}
   - {fileID: 913972365}
+  - {fileID: 2044974898}
   - {fileID: 1504570861}
   - {fileID: 450954933}
   m_Father: {fileID: 0}
@@ -3877,7 +3878,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1007021145}
-  - {fileID: 2044974898}
   m_Father: {fileID: 937144151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3897,6 +3897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98e4dc13b4d59744aebca58c31180b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamIcon: {fileID: 2044974897}
   textWarning: {fileID: 450954934}
 --- !u!114 &1504570863
 MonoBehaviour:
@@ -5372,12 +5373,12 @@ RectTransform:
   - {fileID: 1780617674}
   - {fileID: 844178218}
   - {fileID: 1199679224}
-  m_Father: {fileID: 1504570861}
+  m_Father: {fileID: 937144151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 443}
-  m_SizeDelta: {x: 900, y: 652.6899}
+  m_AnchoredPosition: {x: 0, y: -15}
+  m_SizeDelta: {x: -720, y: -313.31018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044974899
 MonoBehaviour:
@@ -5461,6 +5462,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "\uB3CC\uC544\uAC00\uAE30"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041593955796635959, guid: edf3e5888d051ed4897b38e65bd2099d,
+        type: 3}
+      propertyPath: m_text
+      value: "\uAE40\uB3D9\uD604 : \uBB38\uC81C \uCD94\uAC00 \uBC0F \uC800\uC7A5
+        \uAE30\uB2A5 \uAC1C\uBC1C"
       objectReference: {fileID: 0}
     - target: {fileID: 2166414089477817564, guid: edf3e5888d051ed4897b38e65bd2099d,
         type: 3}
@@ -5582,6 +5589,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 819623360}
+    - target: {fileID: 7705118092173969660, guid: edf3e5888d051ed4897b38e65bd2099d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8100239008711689511, guid: edf3e5888d051ed4897b38e65bd2099d,
         type: 3}
       propertyPath: m_AnchoredPosition.y

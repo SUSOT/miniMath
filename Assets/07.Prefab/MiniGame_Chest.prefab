@@ -16360,6 +16360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fcb16cfe79dd548b25d0e5a61915d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playableDirector: {fileID: 5268698233383161845}
 --- !u!1 &2521552680976326716
 GameObject:
   m_ObjectHideFlags: 0
@@ -38274,7 +38275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbee26e34e2594648aa15ab909b50fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutScene: {fileID: 5623486814639369221}
+  currentCutScene: {fileID: 0}
+  firstAnswer: {fileID: 11400000, guid: 0377a6d477f0f774a9d3c2ee6a3f5992, type: 2}
+  secondAnswer: {fileID: 11400000, guid: 2523e2d8b166c154f99c3b7727a14476, type: 2}
+  thirdAnswer: {fileID: 11400000, guid: 46a258a8d9707884f8dcf20ff021cf61, type: 2}
 --- !u!1 &6175876543492434160
 GameObject:
   m_ObjectHideFlags: 0

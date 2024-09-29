@@ -2,34 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemFunctions
+public class ItemFunctions : MonoBehaviour
 {
+
     public void MyScoreUpMethod()
     {
-        Debug.Log("1");
+        ItemManager.Instance.orderPlayer.score += 500;//점수
+        //orderManager.ItemUsed();//끝
     }
     public void MyScoreDownMethod()
     {
-        Debug.Log("2");
+        ItemManager.Instance.orderPlayer.score += 500;//점수
+        //orderManager.ItemUsed();
     }
     public void AnotherScoreUpMethod()
     {
-        Debug.Log("3");
+        ItemManager.Instance.orderPlayer.score += 500;//점수
+        //orderManager.ItemUsed();
     }
     public void AnotherScoreDownMethod()
     {
-        Debug.Log("4");
+        ItemManager.Instance.orderPlayer.score += 500;//점수
+        //orderManager.ItemUsed();
     }
     public void EveryScoreUpMethod()
     {
-        Debug.Log("1");
+        ItemManager.Instance.orderPlayer.score += 500;//점수
+        //orderManager.ItemUsed();
     }
     public void EveryScoreDownMethod()
     {
-        Debug.Log("5");
+        ItemManager.Instance.orderPlayer.score += 500;//점수
+        //orderManager.ItemUsed();
     }
     public void DoubleScoreMethod()
     {
-        Debug.Log("6");
+        ItemManager.Instance.orderPlayer.score += 500;//점수
+        //orderManager.ItemUsed();
     }
 }
