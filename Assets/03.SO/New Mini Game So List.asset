@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: New Mini Game So List
   m_EditorClassIdentifier: 
   randomMiniGameList:
-  - {fileID: 11400000, guid: 90d22958bde8629478578e3020e7284b, type: 2}
+  - {fileID: 11400000, guid: bce3b7599961ccd4eb34f13b2085737e, type: 2}
