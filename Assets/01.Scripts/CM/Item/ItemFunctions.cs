@@ -66,8 +66,8 @@ public class ItemFunctions : MonoBehaviour
         _orderManager.ItemUsed();
     }
 
-    private void CorAnim()
+    private IEnumerator CorAnim()
     {
-
+        yield return null;
     }
 }
