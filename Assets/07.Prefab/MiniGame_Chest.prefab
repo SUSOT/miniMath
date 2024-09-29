@@ -16347,7 +16347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d00519bc9961348960ba211bd7650a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solveMathProblemCamera: {fileID: 7880725741164833459}
+  solveMathProblemCamera: {fileID: 990402227449995136}
 --- !u!114 &7182309553205163866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38126,7 +38126,7 @@ PlayableDirector:
   m_GameObject: {fileID: 6164370028705154259}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 46a258a8d9707884f8dcf20ff021cf61, type: 2}
+  m_PlayableAsset: {fileID: 0}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -38156,6 +38156,24 @@ PlayableDirector:
     value: {fileID: 3792707463759122730}
   - key: {fileID: 2957047496160145618, guid: 46a258a8d9707884f8dcf20ff021cf61, type: 2}
     value: {fileID: 6088056588983143197}
+  - key: {fileID: 5598492266527802254, guid: e1b19663815152d4fabf2ace2b6266c1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -5344664712614286657, guid: e1b19663815152d4fabf2ace2b6266c1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8207321583310673001, guid: e1b19663815152d4fabf2ace2b6266c1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -458808994477668176, guid: e1b19663815152d4fabf2ace2b6266c1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2836983272741040032, guid: e1b19663815152d4fabf2ace2b6266c1, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1140526989447633400, guid: 4a8a9e90ac6b2ea449062b97ee069a6d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4552880479894138125, guid: 4a8a9e90ac6b2ea449062b97ee069a6d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2370781401966179662, guid: 4a8a9e90ac6b2ea449062b97ee069a6d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8034380343855827347, guid: 4a8a9e90ac6b2ea449062b97ee069a6d, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &6008636194351410758
@@ -38171,9 +38189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCutScene: {fileID: 0}
-  firstAnswer: {fileID: 11400000, guid: 0377a6d477f0f774a9d3c2ee6a3f5992, type: 2}
-  secondAnswer: {fileID: 11400000, guid: 2523e2d8b166c154f99c3b7727a14476, type: 2}
-  thirdAnswer: {fileID: 11400000, guid: 46a258a8d9707884f8dcf20ff021cf61, type: 2}
+  leftAnswer: {fileID: 11400000, guid: 2523e2d8b166c154f99c3b7727a14476, type: 2}
+  rightAnswer: {fileID: 11400000, guid: 0377a6d477f0f774a9d3c2ee6a3f5992, type: 2}
+  middleAnswer: {fileID: 11400000, guid: 46a258a8d9707884f8dcf20ff021cf61, type: 2}
 --- !u!1 &6175876543492434160
 GameObject:
   m_ObjectHideFlags: 0
