@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CharacterSoList
   m_EditorClassIdentifier: 
   characterImage:
-  - {fileID: 21300000, guid: 76129c7f5fb49f540a9063990e6bce4d, type: 3}
   - {fileID: 21300000, guid: 19dadbafa054f0b4fa7986d31c0b17c6, type: 3}
   - {fileID: 21300000, guid: a48488bcb8f14e84db84644f35987065, type: 3}
+  - {fileID: 21300000, guid: 76129c7f5fb49f540a9063990e6bce4d, type: 3}
   - {fileID: 21300000, guid: d24ea6d64d0bba44584480051a32aa37, type: 3}
   - {fileID: 21300000, guid: 6ca2f0e3da4be254da167d6d7fdc2a0f, type: 3}
   - {fileID: 21300000, guid: f32dfbaf01e6a3c41a5d4c745aac2460, type: 3}
