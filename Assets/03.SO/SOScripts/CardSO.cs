@@ -10,6 +10,7 @@ public class CardSO : ScriptableObject
     public string teamName;
 
     private int _score;
+
     public int score
     {
         get

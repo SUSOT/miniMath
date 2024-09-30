@@ -67,6 +67,15 @@ public class OrderManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        //for(int i=0; i<playerCard.Length; i++)
+        //{
+        //    print($"{playerCard[i].teamName}ÆÀÀÇ Á¡¼ö´Â{playerCard[i].score}");
+        //}
+
+        print(currentOrder);
+    }
 
     public void SolveStart()
     {
