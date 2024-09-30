@@ -1,8 +1,12 @@
 fileFormatVersion: 2
-guid: 376dae3e9f72fda479551420243eaac5
+<<<<<<<< HEAD:Assets/03.SO/ProblemSO/TestProblem03.asset.meta
+guid: bcf03c55d38a79e44ba101edec9330e6
+========
+guid: 532c0b93fc663464ebdeaf60d09e7ff7
+>>>>>>>> Base:Assets/03.SO/ProblemSO/TestProblem04.asset.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 0
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
