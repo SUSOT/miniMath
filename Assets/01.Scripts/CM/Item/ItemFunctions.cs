@@ -14,7 +14,7 @@ public class ItemFunctions : MonoBehaviour
         if(_playableDirector.duration < _playableDirector.time + 0.1f)
         {
             ItemManager.Instance.orderPlayer.score += AddScore[0];
-            StartCoroutine(CorAnim());
+            //StartCoroutine(CorAnim());
         }
     }
     public void MyScoreDownMethod()
