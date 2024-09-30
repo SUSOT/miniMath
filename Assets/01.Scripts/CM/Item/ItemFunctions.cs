@@ -13,86 +13,61 @@ public class ItemFunctions : MonoBehaviour
 
     public void MyScoreUpMethod()
     {
-        if (_playableDirector[_moveItemScene.rand].duration <= _playableDirector[_moveItemScene.rand].time)
-        {
-            ItemManager.Instance.orderPlayer.score += AddScore[0];
-            StartCoroutine(CorAnim());
-        }
+        ItemManager.Instance.orderPlayer.score += AddScore[0];
+        StartCoroutine(CorAnim());
     }
     public void MyScoreDownMethod()
     {
 
-        if (_playableDirector[_moveItemScene.rand].duration <= _playableDirector[_moveItemScene.rand].time)
-        {
-            ItemManager.Instance.orderPlayer.score -= AddScore[1];
-            StartCoroutine(CorAnim());
-        }
+        ItemManager.Instance.orderPlayer.score -= AddScore[1];
+        StartCoroutine(CorAnim());
     }
     public void AnotherScoreUpMethod()
     {
-        if (_playableDirector[_moveItemScene.rand].duration <= _playableDirector[_moveItemScene.rand].time)
+        for (int i = 0; i < _orderManager.orderCount; i++)
         {
-            for (int i = 0; i < _orderManager.orderCount; i++)
-            {
-                if (i != _orderManager.orderCount)
-                    _orderManager.playerCard[i].score += AddScore[2];
-            }
-            StartCoroutine(CorAnim());
+            if (i != _orderManager.orderCount)
+                _orderManager.playerCard[i].score += AddScore[2];
         }
+        StartCoroutine(CorAnim());
     }
     public void AnotherScoreDownMethod()
     {
-        if (_playableDirector[_moveItemScene.rand].duration <= _playableDirector[_moveItemScene.rand].time)
-        {
 
-            for (int i = 0; i < _orderManager.orderCount; i++)
-            {
-                if (i != _orderManager.orderCount)
-                    _orderManager.playerCard[i].score -= AddScore[3];
-            }
-            StartCoroutine(CorAnim());
+        for (int i = 0; i < _orderManager.orderCount; i++)
+        {
+            if (i != _orderManager.orderCount)
+                _orderManager.playerCard[i].score -= AddScore[3];
         }
+        StartCoroutine(CorAnim());
     }
     public void EveryScoreUpMethod()
     {
-        if (_playableDirector[_moveItemScene.rand].duration <= _playableDirector[_moveItemScene.rand].time)
+        for (int i = 0; i < _orderManager.orderCount; i++)
         {
-            for (int i = 0; i < _orderManager.orderCount; i++)
-            {
-                _orderManager.playerCard[i].score += AddScore[4];
-            }
-            StartCoroutine(CorAnim());
+            _orderManager.playerCard[i].score += AddScore[4];
         }
+        StartCoroutine(CorAnim());
     }
     public void EveryScoreDownMethod()
     {
-        if (_playableDirector[_moveItemScene.rand].duration <= _playableDirector[_moveItemScene.rand].time)
+        for (int i = 0; i < _orderManager.orderCount; i++)
         {
-            for (int i = 0; i < _orderManager.orderCount; i++)
-            {
-                _orderManager.playerCard[i].score -= AddScore[5];
-            }
-            StartCoroutine(CorAnim());
+            _orderManager.playerCard[i].score -= AddScore[5];
         }
+        StartCoroutine(CorAnim());
     }
     public void DoubleScoreMethod()
     {
-        if (_playableDirector[_moveItemScene.rand].duration <= _playableDirector[_moveItemScene.rand].time)
-        {
-            ItemManager.Instance.orderPlayer.score *= 2;
-            StartCoroutine(CorAnim());
-        }
+        ItemManager.Instance.orderPlayer.score *= 2;
+        StartCoroutine(CorAnim());
     }
 
     private IEnumerator CorAnim()
     {
+        yield return new WaitForSeconds(7.5f);
         _itemText.StartCor();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         _orderManager.ItemUsed();
-    }
-
-    private void Update()
-    {
-        Debug.Log(_playableDirector[_moveItemScene.rand].duration < _playableDirector[_moveItemScene.rand].time + 0.01f);
     }
 }
