@@ -3350,6 +3350,7 @@ MonoBehaviour:
   isTest: 1
   testImage: {fileID: 21300000, guid: 6ca2f0e3da4be254da167d6d7fdc2a0f, type: 3}
   testForInSO: {fileID: 1297419994}
+  problemCount: 0
 --- !u!4 &543674270
 Transform:
   m_ObjectHideFlags: 0
@@ -4390,7 +4391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countDownTimer: {fileID: 2127239012}
   playerCard: []
-  problemList: {fileID: 11400000, guid: c0265d15bd0443147a0ce4747e8df9e4, type: 2}
+  problemList: {fileID: 11400000, guid: 0dbecdd8a78c1504395988b5901600c8, type: 2}
   mainText: {fileID: 1419141139}
   currentOrderText: {fileID: 49287972}
   answerTimerText: {fileID: 1904286303}
@@ -5192,6 +5193,60 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 515419633}
+--- !u!1 &984910538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984910540}
+  - component: {fileID: 984910539}
+  m_Layer: 0
+  m_Name: CurrectSettingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &984910539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984910538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db39e99ffb1a2984fb0bebee7546b23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCard:
+  - {fileID: 957000763}
+  - {fileID: 461683312}
+  - {fileID: 1880155611}
+  - {fileID: 1691627642}
+  revealedIcon:
+  - {fileID: 957000763}
+  - {fileID: 461683312}
+  - {fileID: 1880155611}
+  - {fileID: 1691627642}
+--- !u!4 &984910540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984910538}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 466.3748, y: 918.4122, z: 2.339261}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048205585
 GameObject:
   m_ObjectHideFlags: 0
@@ -12813,6 +12868,7 @@ SceneRoots:
   - {fileID: 1230724646}
   - {fileID: 881359906}
   - {fileID: 1083895964}
+  - {fileID: 984910540}
   - {fileID: 37191478}
   - {fileID: 1599782943}
   - {fileID: 2127239016}
