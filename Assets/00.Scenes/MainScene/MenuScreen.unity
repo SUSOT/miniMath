@@ -99097,7 +99097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCanvasGroup: {fileID: 634321059}
-  targetCanvas: {fileID: 331870887}
+  targetCanvas: {fileID: 634321058}
   switchButton: {fileID: 1343315799}
   returnButton: {fileID: 302557947}
   animationDuration: 1
