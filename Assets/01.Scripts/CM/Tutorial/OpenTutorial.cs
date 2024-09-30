@@ -12,6 +12,6 @@ public class OpenTutorial : MonoBehaviour
 
     public void EnterAddProblemScene()
     {
-        SceneManager.LoadScene("TeamSelect");
+        SceneManager.LoadScene("AddProblem");
     }
 }
