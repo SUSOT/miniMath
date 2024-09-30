@@ -15,20 +15,17 @@ public class QuestionUI : MonoBehaviour
         uiCanvasGroup.blocksRaycasts = false;
     }
 
-    void Update()
+    public void StartUI()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !isAnimatingUI)
+        if (isVisible)
         {
-            if (isVisible)
-            {
-                StartCoroutine(HandleBounceEffect(-Screen.height));
-                isVisible = false;
-            }
-            else
-            {
-                StartCoroutine(HandleBounceEffect(0));
-                isVisible = true;
-            }
+            StartCoroutine(HandleBounceEffect(-Screen.height));
+            isVisible = false;
+        }
+        else
+        {
+            StartCoroutine(HandleBounceEffect(0));
+            isVisible = true;
         }
     }
 

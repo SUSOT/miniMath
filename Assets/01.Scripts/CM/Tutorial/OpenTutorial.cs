@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class OpenTutorial : MonoBehaviour
 {
-    public void EnterScene()
+    public void EnterTeamSelectScene()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("TeamSelect");
+    }
+
+    public void EnterAddProblemScene()
+    {
+        SceneManager.LoadScene("AddProblem");
     }
 }
