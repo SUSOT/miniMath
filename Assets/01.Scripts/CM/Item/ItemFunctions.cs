@@ -14,7 +14,7 @@ public class ItemFunctions : MonoBehaviour
         if(_playableDirector.duration < _playableDirector.time + 0.1f)
         {
             ItemManager.Instance.orderPlayer.score += AddScore[0];
-            //StartCoroutine(CorAnim());
+            StartCoroutine(CorAnim());
         }
     }
     public void MyScoreDownMethod()
@@ -23,7 +23,7 @@ public class ItemFunctions : MonoBehaviour
         if (_playableDirector.duration < _playableDirector.time + 0.1f)
         {
             ItemManager.Instance.orderPlayer.score -= AddScore[1];
-            _orderManager.ItemUsed();
+            StartCoroutine(CorAnim());
         }
     }
     public void AnotherScoreUpMethod()
@@ -33,7 +33,7 @@ public class ItemFunctions : MonoBehaviour
             if (i != _orderManager.orderCount)
                 _orderManager.playerCard[i].score += AddScore[2];
         }
-        _orderManager.ItemUsed();
+        StartCoroutine(CorAnim());
     }
     public void AnotherScoreDownMethod()
     {
@@ -42,7 +42,7 @@ public class ItemFunctions : MonoBehaviour
             if (i != _orderManager.orderCount)
                 _orderManager.playerCard[i].score -= AddScore[3];
         }
-        _orderManager.ItemUsed();
+        StartCoroutine(CorAnim());
     }
     public void EveryScoreUpMethod()
     {
@@ -50,7 +50,7 @@ public class ItemFunctions : MonoBehaviour
         {
             _orderManager.playerCard[i].score += AddScore[4];
         }
-        _orderManager.ItemUsed();
+        StartCoroutine(CorAnim());
     }
     public void EveryScoreDownMethod()
     {
@@ -58,16 +58,18 @@ public class ItemFunctions : MonoBehaviour
         {
             _orderManager.playerCard[i].score -= AddScore[5];
         }
-        _orderManager.ItemUsed();
+        StartCoroutine(CorAnim());
     }
     public void DoubleScoreMethod()
     {
         ItemManager.Instance.orderPlayer.score *= 2;//Á¡¼ö
-        _orderManager.ItemUsed();
+        StartCoroutine(CorAnim());
     }
 
     private IEnumerator CorAnim()
     {
+
         yield return null;
+        _orderManager.ItemUsed();
     }
 }
