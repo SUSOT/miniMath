@@ -28,7 +28,7 @@ public class OpenChestTimeLine : MonoBehaviour
 
         for (int i = 0; i < answerPoint.Count; i++)
         {
-            correct = answerPoint[i]?.GetComponentInChildren<Correct>();
+            correct = answerPoint[i]?.transform.GetChild(0).GetComponent<Correct>();
             print(correct);
             if (correct != null)
             {

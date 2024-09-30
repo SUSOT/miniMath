@@ -38276,9 +38276,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCutScene: {fileID: 0}
-  firstAnswer: {fileID: 11400000, guid: 0377a6d477f0f774a9d3c2ee6a3f5992, type: 2}
-  secondAnswer: {fileID: 11400000, guid: 2523e2d8b166c154f99c3b7727a14476, type: 2}
-  thirdAnswer: {fileID: 11400000, guid: 46a258a8d9707884f8dcf20ff021cf61, type: 2}
+  leftAnswer: {fileID: 11400000, guid: 2523e2d8b166c154f99c3b7727a14476, type: 2}
+  rightAnswer: {fileID: 11400000, guid: 0377a6d477f0f774a9d3c2ee6a3f5992, type: 2}
+  middleAnswer: {fileID: 11400000, guid: 46a258a8d9707884f8dcf20ff021cf61, type: 2}
+  correct: {fileID: 0}
+  answerPoint: []
+  orderManager: {fileID: 0}
 --- !u!1 &6175876543492434160
 GameObject:
   m_ObjectHideFlags: 0

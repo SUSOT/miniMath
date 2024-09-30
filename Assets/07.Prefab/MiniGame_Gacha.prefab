@@ -217,9 +217,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCutScene: {fileID: 0}
-  firstAnswer: {fileID: 11400000, guid: 0e927f4622375e9488ba588f31367d95, type: 2}
-  secondAnswer: {fileID: 11400000, guid: b56d67997fed4824f8245138e09fc080, type: 2}
-  thirdAnswer: {fileID: 11400000, guid: 619214a6bfa53194a9009036279e32cc, type: 2}
+  leftAnswer: {fileID: 11400000, guid: 0e927f4622375e9488ba588f31367d95, type: 2}
+  rightAnswer: {fileID: 11400000, guid: b56d67997fed4824f8245138e09fc080, type: 2}
+  middleAnswer: {fileID: 11400000, guid: 619214a6bfa53194a9009036279e32cc, type: 2}
 --- !u!1 &1623900853890728806
 GameObject:
   m_ObjectHideFlags: 0
