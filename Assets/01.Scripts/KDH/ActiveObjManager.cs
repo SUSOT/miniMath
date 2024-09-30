@@ -48,4 +48,9 @@ public class ActiveObjManager : MonoBehaviour
     {
         return activeList.Count > 0;
     }
+
+    public bool HasActiveObjectsSec()
+    {
+        return activeList.Count > 1;
+    }
 }
