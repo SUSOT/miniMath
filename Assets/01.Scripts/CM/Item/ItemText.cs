@@ -10,8 +10,14 @@ public class ItemText : MonoBehaviour
     [SerializeField] private float _time = 1f;
     [SerializeField] private List<string> _texts = new List<string>();
     [SerializeField] private MoveItemScene _scene;
-    public IEnumerator ItemTextMethod()
+
+    public void StartCor()
     {
+        StartCoroutine(ItemTextMethod());
+    }
+    private IEnumerator ItemTextMethod()
+    {
+        Debug.Log("fdsafdsa");
         _text.gameObject.SetActive(true);
         _text.text = _texts[_scene.rand];
         yield return new WaitForSeconds(_time);

@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 using TMPro;
-using System.Linq;
 
 public class OrderManager : MonoBehaviour
 {
@@ -69,7 +68,7 @@ public class OrderManager : MonoBehaviour
 
     public void SolveStart()
     {
-        GetProblem();
+        RandomProblemGacha();
         countDownTimer.gameObject.SetActive(true);
         countDownTimer.TimerStart();
     }
@@ -89,13 +88,22 @@ public class OrderManager : MonoBehaviour
 
     private void GetProblem()
     {
-        int rand = Random.Range(0, problemList.problemSO.Count);
-        currentProblem = problemList.problemSO[rand];
+        if (currentProblem.CorrectAnswer.Length < 1 || currentProblem.firstWrongAnswer.Length < 1 || currentProblem.secondWrongAnswer.Length < 1 || currentProblem.whatIsProblem.Length < 1)
+        {
+            RandomProblemGacha();
+        }
 
         //문제 세팅
         SettingProblem();
 
         mainText.text = currentProblem.whatIsProblem;
+    }
+
+    private void RandomProblemGacha()
+    {
+        int rand = Random.Range(0, problemList.problemSO.Count);
+        currentProblem = problemList.problemSO[rand];
+        GetProblem();
     }
 
     private void SettingProblem()
@@ -220,13 +228,13 @@ public class OrderManager : MonoBehaviour
                 ItemManager.Instance.revealedPlayers.Add(playerCard[i]);
             }
         }
-        RevealedTemasChooseTime();
         ItemManager.Instance.orderNum = 0;
+        RevealedTemasChooseTime();
     }
 
     private void RevealedTemasChooseTime()
     {
-        if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count -1)
+        if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count)
         {
             GameEnd();
         }
@@ -270,5 +278,6 @@ public class OrderManager : MonoBehaviour
     {
         print("게임끝");
         chestTimeLine = null;
+        
     }
 }

@@ -8,6 +8,10 @@ public class QuestionUI : MonoBehaviour
     public RectTransform uiCanvasTransform;
     private bool isVisible = false;
     private bool isAnimatingUI = false;
+
+    [SerializeField]
+    private GameObject startButtonHide;
+
     void Start()
     {
         uiCanvasTransform.anchoredPosition = new Vector2(0, -Screen.height);
@@ -21,11 +25,13 @@ public class QuestionUI : MonoBehaviour
         {
             StartCoroutine(HandleBounceEffect(-Screen.height));
             isVisible = false;
+            startButtonHide.SetActive(true);
         }
         else
         {
             StartCoroutine(HandleBounceEffect(0));
             isVisible = true;
+            startButtonHide.SetActive(false);
         }
     }
 
