@@ -7,6 +7,7 @@ public class OpenTutorial : MonoBehaviour
 {
     public void EnterTeamSelectScene()
     {
+
         SceneManager.LoadScene("TeamSelect");
     }
 
