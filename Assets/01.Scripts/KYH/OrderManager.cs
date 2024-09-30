@@ -79,6 +79,7 @@ public class OrderManager : MonoBehaviour
 
     public void SolveStart()
     {
+        maxIdx = problemList.problemSO.Count;
         RandomProblemGacha();
         countDownTimer.gameObject.SetActive(true);
         countDownTimer.TimerStart();
@@ -97,6 +98,8 @@ public class OrderManager : MonoBehaviour
         mainText.text = "";
     }
 
+    int maxIdx;
+
     private void GetProblem()
     {
         if (currentProblem.CorrectAnswer.Length < 1 || currentProblem.firstWrongAnswer.Length < 1 || currentProblem.secondWrongAnswer.Length < 1 || currentProblem.whatIsProblem.Length < 1)
@@ -112,8 +115,14 @@ public class OrderManager : MonoBehaviour
 
     private void RandomProblemGacha()
     {
-        int rand = Random.Range(0, problemList.problemSO.Count);
+        int rand = Random.Range(0, maxIdx);
         currentProblem = problemList.problemSO[rand];
+
+        ProblemSO temp = problemList.problemSO[rand];
+        problemList.problemSO[rand] = problemList.problemSO[maxIdx - 1];
+        problemList.problemSO[maxIdx - 1] = temp;
+        maxIdx--;
+
         GetProblem();
     }
 
