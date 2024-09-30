@@ -9,24 +9,7 @@ public class CardSO : ScriptableObject
     public Sprite cardImage;
     public string teamName;
 
-    private int _score;
-    public int score
-    {
-        get
-        {
-            return _score; 
-        }
-        set
-        {
-            if(_score <= 0)
-            {
-                _score = 0;
-            }
-            else
-            {
-                _score = value;
-            }
-        }
-    }
+    public int score;
+    
     public bool isCorrectAnswer;
 }
