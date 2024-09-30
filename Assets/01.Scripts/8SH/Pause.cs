@@ -33,4 +33,12 @@ public class Pause : MonoBehaviour
             }
         }
     }
+
+    public void Open()
+    {
+        opened = true;
+        pause.alpha = 1;
+        pause.blocksRaycasts = true;
+        Time.timeScale = 0;
+    }
 }
