@@ -42,5 +42,6 @@ public class Counter : MonoBehaviour
     {
         text.text = $"{currentNum}";
         previousNum = count;
+        GameManager.Instance.problemCount = currentNum;
     }
 }

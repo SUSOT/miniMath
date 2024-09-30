@@ -21,6 +21,8 @@ public class OrderManager : MonoBehaviour
     public int orderCount { get; private set; }
     private int maxTeamCount;
 
+    private int currentProblemCount;
+
 
     [SerializeField]
     private TextMeshProUGUI mainText;
@@ -276,8 +278,16 @@ public class OrderManager : MonoBehaviour
 
     private void GameEnd()
     {
-        print("게임끝");
-        chestTimeLine = null;
-        SolveStart();
+        if(currentProblemCount < GameManager.Instance.problemCount)
+        {
+            print("게임끝");
+            chestTimeLine = null;
+            SolveStart();
+            currentProblemCount++;
+        }
+        else
+        {
+            //끝!
+        }
     }
 }
