@@ -7,11 +7,13 @@ public class ItemFunctions : MonoBehaviour
 {
     [SerializeField] private OrderManager _orderManager;
     [SerializeField] private List<int> AddScore = new List<int>();
-    [SerializeField] private PlayableDirector _playableDirector;
+    [SerializeField] private List<PlayableDirector> _playableDirector = new List<PlayableDirector>();
+    [SerializeField] private MoveItemScene _moveItemScene;
+    [SerializeField] private ItemText _itemText;
 
     public void MyScoreUpMethod()
     {
-        if(_playableDirector.duration < _playableDirector.time + 0.1f)
+        if (_playableDirector[_moveItemScene.rand].duration < _playableDirector[_moveItemScene.rand].time + 0.1f)
         {
             ItemManager.Instance.orderPlayer.score += AddScore[0];
             StartCoroutine(CorAnim());
@@ -20,7 +22,7 @@ public class ItemFunctions : MonoBehaviour
     public void MyScoreDownMethod()
     {
 
-        if (_playableDirector.duration < _playableDirector.time + 0.1f)
+        if (_playableDirector[_moveItemScene.rand].duration < _playableDirector[_moveItemScene.rand].time + 0.1f)
         {
             ItemManager.Instance.orderPlayer.score -= AddScore[1];
             StartCoroutine(CorAnim());
@@ -28,37 +30,50 @@ public class ItemFunctions : MonoBehaviour
     }
     public void AnotherScoreUpMethod()
     {
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        if (_playableDirector[_moveItemScene.rand].duration < _playableDirector[_moveItemScene.rand].time + 0.1f)
         {
-            if (i != _orderManager.orderCount)
-                _orderManager.playerCard[i].score += AddScore[2];
+            for (int i = 0; i < _orderManager.orderCount; i++)
+            {
+                if (i != _orderManager.orderCount)
+                    _orderManager.playerCard[i].score += AddScore[2];
+            }
+            StartCoroutine(CorAnim());
         }
-        StartCoroutine(CorAnim());
     }
     public void AnotherScoreDownMethod()
     {
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        if (_playableDirector[_moveItemScene.rand].duration < _playableDirector[_moveItemScene.rand].time + 0.1f)
         {
-            if (i != _orderManager.orderCount)
-                _orderManager.playerCard[i].score -= AddScore[3];
+
+            for (int i = 0; i < _orderManager.orderCount; i++)
+            {
+                if (i != _orderManager.orderCount)
+                    _orderManager.playerCard[i].score -= AddScore[3];
+            }
+            StartCoroutine(CorAnim());
         }
-        StartCoroutine(CorAnim());
     }
     public void EveryScoreUpMethod()
     {
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        if (_playableDirector[_moveItemScene.rand].duration < _playableDirector[_moveItemScene.rand].time + 0.1f)
         {
-            _orderManager.playerCard[i].score += AddScore[4];
+            for (int i = 0; i < _orderManager.orderCount; i++)
+            {
+                _orderManager.playerCard[i].score += AddScore[4];
+            }
+            StartCoroutine(CorAnim());
         }
-        StartCoroutine(CorAnim());
     }
     public void EveryScoreDownMethod()
     {
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        if (_playableDirector[_moveItemScene.rand].duration < _playableDirector[_moveItemScene.rand].time + 0.1f)
         {
-            _orderManager.playerCard[i].score -= AddScore[5];
+            for (int i = 0; i < _orderManager.orderCount; i++)
+            {
+                _orderManager.playerCard[i].score -= AddScore[5];
+            }
+            StartCoroutine(CorAnim());
         }
-        StartCoroutine(CorAnim());
     }
     public void DoubleScoreMethod()
     {
@@ -68,7 +83,7 @@ public class ItemFunctions : MonoBehaviour
 
     private IEnumerator CorAnim()
     {
-
+        _itemText.ItemTextMethod();
         yield return null;
         _orderManager.ItemUsed();
     }
