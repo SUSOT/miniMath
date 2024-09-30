@@ -37,14 +37,12 @@ public class WriteQuestion : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        targetCanvasGroup.interactable = false;
-        targetCanvasGroup.blocksRaycasts = false;
+        targetCanvasGroup.interactable = true;
+        targetCanvasGroup.blocksRaycasts = true;
         targetCanvasTransform.DOAnchorPosY(0, 1f).SetEase(Ease.OutBounce);
 
         yield return new WaitForSeconds(1f);
 
-        targetCanvasGroup.interactable = true;
-        targetCanvasGroup.blocksRaycasts = true;
         isAnimating = false;
     }
 }
