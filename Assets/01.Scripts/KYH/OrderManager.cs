@@ -278,6 +278,6 @@ public class OrderManager : MonoBehaviour
     {
         print("∞‘¿”≥°");
         chestTimeLine = null;
-        
+        SolveStart();
     }
 }

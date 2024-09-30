@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public Sprite testImage;
     public GameObject testForInSO;
 
+    public int problemCount;
+
     private void Awake()
     {
         teamsIcon = new Sprite[maxPlayerCount];
