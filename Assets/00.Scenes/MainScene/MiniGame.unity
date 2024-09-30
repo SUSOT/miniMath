@@ -327,7 +327,7 @@ PrefabInstance:
         type: 3}
       propertyPath: miniGameList
       value: 
-      objectReference: {fileID: 11400000, guid: 12861283ffa659940a1129a4c4da5013,
+      objectReference: {fileID: 11400000, guid: 920b093db24548449868e7ed6931f2fc,
         type: 2}
     - target: {fileID: 1940866030704650886, guid: fb7343c3be7f6304d8f8cae5f4d4db38,
         type: 3}
@@ -1602,8 +1602,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 14
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 443ca548a145729458578cb131f01ab2, type: 2}
+  m_sharedMaterial: {fileID: -7154848015047089600, guid: 443ca548a145729458578cb131f01ab2,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7643,8 +7644,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 20
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 443ca548a145729458578cb131f01ab2, type: 2}
+  m_sharedMaterial: {fileID: -7154848015047089600, guid: 443ca548a145729458578cb131f01ab2,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8064,7 +8066,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.3
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -11851,8 +11853,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 443ca548a145729458578cb131f01ab2, type: 2}
+  m_sharedMaterial: {fileID: -7154848015047089600, guid: 443ca548a145729458578cb131f01ab2,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

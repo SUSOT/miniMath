@@ -11,7 +11,7 @@ public class OpenTutorial : MonoBehaviour
 
     public void EnterTeamSelectScene()
     {
-        if (ActiveObjManager.Instance.HasActiveObjects())
+        if (ActiveObjManager.Instance.HasActiveObjectsSec())
         {
             SceneManager.LoadScene("TeamSelect");
         }
