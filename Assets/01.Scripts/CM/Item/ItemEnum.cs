@@ -33,6 +33,5 @@ public class ItemEnum : MonoBehaviour
 
         type = itemFunctions.GetType();
         type.GetMethod($"{items}Method").Invoke(itemFunctions, null);
-        orderManager.ItemUsed();
     }
 }

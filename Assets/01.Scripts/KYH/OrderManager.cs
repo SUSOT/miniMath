@@ -228,13 +228,13 @@ public class OrderManager : MonoBehaviour
                 ItemManager.Instance.revealedPlayers.Add(playerCard[i]);
             }
         }
-        RevealedTemasChooseTime();
         ItemManager.Instance.orderNum = 0;
+        RevealedTemasChooseTime();
     }
 
     private void RevealedTemasChooseTime()
     {
-        if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count -1)
+        if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count)
         {
             GameEnd();
         }
