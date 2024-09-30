@@ -7982,7 +7982,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _orderManager: {fileID: 822424017}
-  AddScore: 000000000000000000000000000000000000000000000000
+  AddScore: c800000096000000960000006400000096000000c8000000
+  _playableDirector: {fileID: 0}
 --- !u!1 &1496817581
 GameObject:
   m_ObjectHideFlags: 0
