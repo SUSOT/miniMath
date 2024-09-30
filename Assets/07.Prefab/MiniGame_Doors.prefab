@@ -1012,7 +1012,6 @@ GameObject:
   - component: {fileID: 8851526228259137106}
   - component: {fileID: 7276886033889665489}
   - component: {fileID: 6765722359873541051}
-  - component: {fileID: 6114083706313131487}
   - component: {fileID: 5275235725621790631}
   m_Layer: 0
   m_Name: Curtain
@@ -1029,13 +1028,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2794806010716689007}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.70710677, z: 0.70710677, w: 0}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 0.26, y: 12.94, z: -0.94}
-  m_LocalScale: {x: 1.9255127, y: 1, z: 1.2797892}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.9255127, y: 1, z: 1.279789}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9164566522636917758}
-  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
+  m_LocalEulerAnglesHint: {x: 180, y: -90, z: 90}
 --- !u!33 &7276886033889665489
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1043,7 +1042,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2794806010716689007}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 8181472223088594101, guid: b1d07f06a35417849afc754367565317, type: 3}
 --- !u!23 &6765722359873541051
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1064,7 +1063,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eee29630c07694445813d5f6d5176543, type: 2}
+  - {fileID: 2100000, guid: f275acda18c3d9b4da1518387b656e2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1086,28 +1085,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6114083706313131487
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2794806010716689007}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!95 &5275235725621790631
 Animator:
   serializedVersion: 5
@@ -1272,10 +1249,10 @@ PlayableDirector:
     value: {fileID: 4065756412848024185}
   - key: {fileID: -3039592708610055097, guid: d5c4a3a9823c72f4a8c79bcb2df8fb45, type: 2}
     value: {fileID: 8556950130858561486}
-  - key: {fileID: -2462854310894797386, guid: d5c4a3a9823c72f4a8c79bcb2df8fb45, type: 2}
-    value: {fileID: 5275235725621790631}
   - key: {fileID: -2227399947379752270, guid: d5c4a3a9823c72f4a8c79bcb2df8fb45, type: 2}
     value: {fileID: 4499732969460275692}
+  - key: {fileID: 2569831243591736251, guid: d5c4a3a9823c72f4a8c79bcb2df8fb45, type: 2}
+    value: {fileID: 5275235725621790631}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &9163656156016352108

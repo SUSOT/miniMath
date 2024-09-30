@@ -21,17 +21,17 @@ public class OpenTutorial : MonoBehaviour
         }
     }
 
-    public void EnterAddProblemScene()
-    {
-        if (ActiveObjManager.Instance.HasActiveObjects())
-        {
-            SceneManager.LoadScene("AddProblem");
-        }
-        else
-        {
-            ShowCantStartMessage();
-        }
-    }
+    //public void EnterAddProblemScene()
+    //{
+    //    if (ActiveObjManager.Instance.HasActiveObjects())
+    //    {
+    //        SceneManager.LoadScene("AddProblem");
+    //    }
+    //    else
+    //    {
+    //        ShowCantStartMessage();
+    //    }
+    //}
 
     private void ShowCantStartMessage()
     {

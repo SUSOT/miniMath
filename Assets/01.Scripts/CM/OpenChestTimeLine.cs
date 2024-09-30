@@ -48,7 +48,6 @@ public class OpenChestTimeLine : MonoBehaviour
 
 
         orderManager.answerRevealed = currentCutScene;
-    
     }
 
     //private void Start()

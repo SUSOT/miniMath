@@ -67,7 +67,7 @@ public class ItemFunctions : MonoBehaviour
     {
         yield return new WaitForSeconds(7.5f);
         _itemText.StartCor();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         _orderManager.ItemUsed();
     }
 }
