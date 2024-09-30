@@ -3817,7 +3817,7 @@ PlayableDirector:
   m_GameObject: {fileID: 8901609315469881068}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 3414249353751454e9fae1ad8e694c41, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 34d269ced22cc014192d20f42c8af098, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -3859,6 +3859,12 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 400524310404374590, guid: 1446d058682d5a44ba320660ebd1e684, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -8490857571487789490, guid: 34d269ced22cc014192d20f42c8af098, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 474306666194804817, guid: 34d269ced22cc014192d20f42c8af098, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3195971616052394697, guid: 34d269ced22cc014192d20f42c8af098, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &6339640852774966043
@@ -3874,9 +3880,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCutScene: {fileID: 0}
-  firstAnswer: {fileID: 11400000, guid: 34d269ced22cc014192d20f42c8af098, type: 2}
-  secondAnswer: {fileID: 11400000, guid: 883f6f67254a6cf48a3790a406786501, type: 2}
-  thirdAnswer: {fileID: 11400000, guid: ecf4d0f2a207a5c44a66b93485a2fe06, type: 2}
+  leftAnswer: {fileID: 11400000, guid: 34d269ced22cc014192d20f42c8af098, type: 2}
+  rightAnswer: {fileID: 0}
+  middleAnswer: {fileID: 0}
 --- !u!1001 &3804542355171305496
 PrefabInstance:
   m_ObjectHideFlags: 0
