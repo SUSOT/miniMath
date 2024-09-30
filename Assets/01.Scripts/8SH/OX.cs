@@ -13,15 +13,16 @@ public enum OandX
 
 public class OX : MonoBehaviour
 {
-    public static Sprite O;
-    public static Sprite X;
-    public static Image image;
-    public static SettingManager instance;
+    public Sprite O;
+    public Sprite X;
+    public Image[] images;
+    public static OX instance;
 
     private void Awake()
     {
         if (instance == null)
         {
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -30,17 +31,17 @@ public class OX : MonoBehaviour
         }
     }
 
-    public static void Show(OandX ox)
+    public void Show(OandX ox, int num)
     {
         if (ox == OandX.O)
         {
-            image.sprite = O;
+            images[num].sprite = O;
         }else
         {
-            image.sprite = X;
+            images[num].sprite = X;
         }
-        image.transform.DOScale(0, 0);
-        image.transform.DOScale(3, 1).SetDelay(0.05f);
-        image.transform.DOScale(0, 1).SetDelay(2f);
+        images[num].transform.DOScale(0, 0);
+        images[num].transform.DOScale(.5f, 1).SetDelay(0.05f);
+        images[num].transform.DOScale(0, 1).SetDelay(2f);
     }
 }
