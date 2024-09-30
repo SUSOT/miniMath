@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 
 public class ConnectSO : MonoBehaviour
@@ -22,6 +23,8 @@ public class ConnectSO : MonoBehaviour
         problem.CorrectAnswer = CorrectInput.text;
         problem.firstWrongAnswer = InCorrectInputSec.text;
         problem.secondWrongAnswer = InCorrectInputFir.text;
+
+        EditorUtility.SetDirty(problem);
     }
 
     void Start()
