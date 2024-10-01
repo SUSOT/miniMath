@@ -10,7 +10,7 @@ public class StringQuestion : MonoBehaviour
     public Button switchButton;
     public Button returnButton;
 
-    public float animationDuration = 1f;
+    public float animationDuration = .5f;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class StringQuestion : MonoBehaviour
         targetCanvasGroup.blocksRaycasts = true;
 
         targetCanvasGroup.DOFade(1, animationDuration);
-        targetCanvas.DOAnchorPosY(0, animationDuration).SetEase(Ease.OutBounce);
+        targetCanvas.DOAnchorPosY(0, animationDuration).SetEase(Ease.OutExpo);
     }
 
     void ReturnToTargetCanvas()
@@ -38,6 +38,6 @@ public class StringQuestion : MonoBehaviour
         targetCanvasGroup.blocksRaycasts = false;
 
         targetCanvasGroup.DOFade(0, 0.5f);
-        targetCanvas.DOAnchorPosY(-Screen.height, animationDuration).SetEase(Ease.InBounce);
+        targetCanvas.DOAnchorPosY(-Screen.height, animationDuration).SetEase(Ease.OutExpo);
     }
 }

@@ -41,7 +41,7 @@ public class QuestionUI : MonoBehaviour
         uiCanvasGroup.interactable = false;
         uiCanvasGroup.blocksRaycasts = false;
 
-        uiCanvasTransform.DOAnchorPosY(targetPosY, 1f).SetEase(Ease.OutBounce);
+        uiCanvasTransform.DOAnchorPosY(targetPosY, .5f).SetEase(Ease.OutExpo);
 
         yield return new WaitForSeconds(1f);
 

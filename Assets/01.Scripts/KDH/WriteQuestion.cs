@@ -27,19 +27,19 @@ public class WriteQuestion : MonoBehaviour
         isAnimating = true;
 
         Vector3 originalScale = switchButton.transform.localScale;
-        switchButton.transform.DOScale(originalScale * 0.9f, 0.1f).SetEase(Ease.OutBack);
+        switchButton.transform.DOScale(originalScale * 0.9f, 0.1f).SetEase(Ease.OutExpo);
         yield return new WaitForSeconds(0.1f);
-        switchButton.transform.DOScale(originalScale, 0.1f).SetEase(Ease.OutBack);
+        switchButton.transform.DOScale(originalScale, 0.1f).SetEase(Ease.OutExpo);
 
         currentCanvasGroup.interactable = false;
         currentCanvasGroup.blocksRaycasts = false;
-        currentCanvasTransform.DOAnchorPosY(-Screen.height, 1f).SetEase(Ease.OutBounce);
+        currentCanvasTransform.DOAnchorPosY(-Screen.height, 0.25f).SetEase(Ease.OutExpo);
 
         yield return new WaitForSeconds(1f);
 
         targetCanvasGroup.interactable = true;
         targetCanvasGroup.blocksRaycasts = true;
-        targetCanvasTransform.DOAnchorPosY(0, 1f).SetEase(Ease.OutBounce);
+        targetCanvasTransform.DOAnchorPosY(0, .25f).SetEase(Ease.OutExpo);
 
         yield return new WaitForSeconds(1f);
 
