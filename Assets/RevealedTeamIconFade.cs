@@ -3,14 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class RevealedTeamIconFade : MonoBehaviour
 {
     [SerializeField]
     public Image blackPanel;
 
-    [SerializeField]
     public Image[] teamCard;
+
+    [SerializeField]
+    private GameObject[] playerCard;
+
+    [SerializeField]
+    private OrderManager orderManager;
+
+    [SerializeField]
+    private TextMeshProUGUI[] textMeshPros;
+
+    [SerializeField] private CardSOManager playerScoreSave;
+
+
+    private void Awake()
+    {
+        for (int j = 0; j <= GameManager.Instance.teamCount - 1; j++)
+        {
+            playerCard[j].SetActive(true);
+            playerCard[j].GetComponentInChildren<SetTemaImage>()
+                .SetTeamImage(GameManager.Instance.teamsIcon[j]);
+        }
+    }
+
+    private void OnEnable()
+    {
+        for(int i = 0; i< GameManager.Instance.teamCount - 1; i++)
+        {
+            textMeshPros[i].SetText($"{orderManager.playerCard[i].score}Á¡");
+        }    
+    }
 
     public void FadeIn()
     {

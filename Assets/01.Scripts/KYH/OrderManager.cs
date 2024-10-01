@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 using TMPro;
@@ -221,7 +222,7 @@ public class OrderManager : MonoBehaviour
         wrongAnswer2.SetActive(false);
         chestTimeLine = FindAnyObjectByType<OpenChestTimeLine>();
         chestTimeLine.TimeLine();
-        StartCoroutine(RevealedRoutine());
+        AnswerRightTeams();
     }
 
 
@@ -235,7 +236,7 @@ public class OrderManager : MonoBehaviour
             revealedTeamIcon.SetActive(true);
             revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeIn();
             yield return new WaitForSeconds(2);
-            AnswerRightTeams();
+            GameEnd();
         }
     }
 
@@ -258,7 +259,7 @@ public class OrderManager : MonoBehaviour
     {
         if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count)
         {
-            GameEnd();
+            StartCoroutine(RevealedRoutine());
         }
         else
         {
@@ -309,7 +310,7 @@ public class OrderManager : MonoBehaviour
         }
         else
         {
-            //³¡!
+            SceneManager.LoadScene("");
         }
     }
 }
