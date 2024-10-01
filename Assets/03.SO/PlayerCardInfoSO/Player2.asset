@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardImage: {fileID: 0}
   teamName: 
+  score: 0
+  isCorrectAnswer: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f31d3c7f6f69346bb6f5f9f837a56a, type: 3}
   m_Name: TestProblem02
   m_EditorClassIdentifier: 
-  whatIsProblem: dawdadadad
-  CorrectAnswer: dawdwada
+  whatIsProblem: 
+  CorrectAnswer: 
   firstWrongAnswer: 
   secondWrongAnswer: 
