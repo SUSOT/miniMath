@@ -303,6 +303,7 @@ public class OrderManager : MonoBehaviour
     {
         if(currentProblemCount < GameManager.Instance.problemCount)
         {
+            ItemManager.instance.ItemList[ItemManager.instance.orderNum].SetActive(false);
             print("°ÔÀÓ³¡");
             chestTimeLine = null;
             revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeOut();
