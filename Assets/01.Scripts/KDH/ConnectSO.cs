@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using System.IO;
 
 public class ConnectSO : MonoBehaviour
 {
@@ -16,12 +16,48 @@ public class ConnectSO : MonoBehaviour
     public TMP_InputField InCorrectInputSec;
     public ProblemSO problem;
 
+    private string GetFilePath()
+    {
+        return Path.Combine(Application.dataPath, $"{problem.whatIsProblem}_ProblemSO.json");
+    }
+
     public void ApplyValues()
     {
         problem.whatIsProblem = QuestionInput.text;
         problem.CorrectAnswer = CorrectInput.text;
         problem.firstWrongAnswer = InCorrectInputSec.text;
         problem.secondWrongAnswer = InCorrectInputFir.text;
+    }
+
+    public void SaveToFile() //문제 체크버튼의 OnClick 이벤트 사용을 통해 저장
+    {
+        ApplyValues();
+        string json = JsonUtility.ToJson(problem);
+        File.WriteAllText(GetFilePath(), json);
+        Debug.Log($"문제가 저장됨: {GetFilePath()}");
+    }
+
+    public void LoadFromFile() //문제 설정 후 Start 버튼에 이벤트로 사용을 통해 로드
+    {
+        if (File.Exists(GetFilePath()))
+        {
+            string json = File.ReadAllText(GetFilePath());
+            JsonUtility.FromJsonOverwrite(json, problem);
+            UpdateInputFields();
+            Debug.Log($"문제가 로드됨: {GetFilePath()}");
+        }
+        else
+        {
+            Debug.LogWarning("세이브 파일을 찾을 수 없음");
+        }
+    }
+
+    private void UpdateInputFields()
+    {
+        QuestionInput.text = problem.whatIsProblem;
+        CorrectInput.text = problem.CorrectAnswer;
+        InCorrectInputFir.text = problem.firstWrongAnswer;
+        InCorrectInputSec.text = problem.secondWrongAnswer;
     }
 
     void Start()

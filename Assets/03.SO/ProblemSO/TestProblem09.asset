@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsProblem: 
   CorrectAnswer: 
-  secondWrongAnswer: 
   firstWrongAnswer: 
+  secondWrongAnswer: 
