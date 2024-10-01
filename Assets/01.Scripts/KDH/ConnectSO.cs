@@ -31,7 +31,7 @@ public class ConnectSO : MonoBehaviour
 
     }
 
-    public void SaveToFile() //문제 체크버튼의 OnClick 이벤트 사용을 통해 저장
+    public void SaveToFile()
     {
         ApplyValues();
         string json = JsonUtility.ToJson(problem);
@@ -39,7 +39,7 @@ public class ConnectSO : MonoBehaviour
         Debug.Log($"문제가 저장됨: {GetFilePath()}");
     }
 
-    public void LoadFromFile() //문제 설정 후 Start 버튼에 이벤트로 사용을 통해 로드
+    public void LoadFromFile()
     {
         if (File.Exists(GetFilePath()))
         {
