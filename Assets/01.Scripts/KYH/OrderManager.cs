@@ -305,12 +305,13 @@ public class OrderManager : MonoBehaviour
         {
             print("∞‘¿”≥°");
             chestTimeLine = null;
-            SolveStart();
+            revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeOut();
             currentProblemCount++;
+            SolveStart();
         }
         else
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("EndScene");
         }
     }
 }

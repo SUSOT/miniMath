@@ -50,4 +50,12 @@ public class RevealedTeamIconFade : MonoBehaviour
             teamCard[i].DOFade(1,1);
         }
     }
+    public void FadeOut()
+    {
+        blackPanel.DOFade(0, 1);
+        for (int i = 0; i < teamCard.Length; i++)
+        {
+            teamCard[i].DOFade(0, 1);
+        }
+    }
 }
