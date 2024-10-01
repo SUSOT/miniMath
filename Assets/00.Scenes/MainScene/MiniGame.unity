@@ -3487,10 +3487,10 @@ MonoBehaviour:
   _texts:
   - "\uBCF8\uC778 \uD300 \uC810\uC218 +200"
   - "\uBCF8\uC778 \uD300 \uC810\uC218 -100"
-  - "\uBCF8\uC778 \uD301 \uC81C\uC678 \uC810\uC218 +150"
+  - "\uBCF8\uC778 \uD300 \uC81C\uC678 \uC810\uC218 +150"
   - "\uBCF8\uC778 \uD300 \uC81C\uC678 \uC810\uC218 -150"
-  - "\uBAA8\uB4E0 \uD301 \uC810\uC218 +200"
-  - "\uBAA8\uB4E0 \uD301 \uC810\uC218 -100"
+  - "\uBAA8\uB4E0 \uD300 \uC810\uC218 +200"
+  - "\uBAA8\uB4E0 \uD300 \uC810\uC218 -100"
   - "\uBCF8\uC778 \uD300 \uC810\uC218 x2"
 --- !u!1 &633839996
 GameObject:
