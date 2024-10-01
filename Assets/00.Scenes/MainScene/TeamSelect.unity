@@ -4767,16 +4767,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD300 \uC774\uB984\uC744 \uC815\uD574\uC8FC\uC138\uC694"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6ecb696c042db0842acfec02350afb9f, type: 2}
-  m_sharedMaterial: {fileID: 2541882872713828352, guid: 6ecb696c042db0842acfec02350afb9f,
+  m_fontAsset: {fileID: 11400000, guid: 9b669b17ed4a1494897bbcde96e37094, type: 2}
+  m_sharedMaterial: {fileID: 2541882872713828352, guid: 9b669b17ed4a1494897bbcde96e37094,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 5066061
-  m_fontColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4809,7 +4809,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
