@@ -14,7 +14,6 @@ public class ItemManager : MonoBehaviour
 
     public int randItem;
 
-    [HideInInspector]
     public CardSO orderPlayer;
 
     [HideInInspector]

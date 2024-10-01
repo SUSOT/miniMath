@@ -27,6 +27,8 @@ public class ConnectSO : MonoBehaviour
         problem.CorrectAnswer = CorrectInput.text;
         problem.firstWrongAnswer = InCorrectInputSec.text;
         problem.secondWrongAnswer = InCorrectInputFir.text;
+
+
     }
 
     public void SaveToFile()
