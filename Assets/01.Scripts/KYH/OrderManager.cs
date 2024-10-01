@@ -37,7 +37,7 @@ public class OrderManager : MonoBehaviour
     [SerializeField]
     private GameObject teamIcon;
 
-    private CardSO currentOrder;
+    public CardSO currentOrder;
 
     public List<RectTransform> randAnswerButtonPos = new List<RectTransform>();
 

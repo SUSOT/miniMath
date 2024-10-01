@@ -31,9 +31,9 @@ public class ItemFunctions : MonoBehaviour
     }
     public void AnotherScoreUpMethod()
     {
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        for (int i = 0; i < _orderManager.playerCard.Length; i++)
         {
-            if (i != _orderManager.orderCount)
+            if (_orderManager.playerCard[i] != _orderManager.currentOrder)
             {
                 _orderManager.playerCard[i].score += AddScore[2];
                 playerScoreSave.cardSO = _orderManager.playerCard[i];
@@ -46,9 +46,9 @@ public class ItemFunctions : MonoBehaviour
     public void AnotherScoreDownMethod()
     {
 
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        for (int i = 0; i < _orderManager.playerCard.Length; i++)
         {
-            if (i != _orderManager.orderCount)
+            if (_orderManager.playerCard[i] != _orderManager.currentOrder)
             {
                 _orderManager.playerCard[i].score -= AddScore[3];
                 playerScoreSave.cardSO = _orderManager.playerCard[i];
@@ -60,7 +60,7 @@ public class ItemFunctions : MonoBehaviour
     }
     public void EveryScoreUpMethod()
     {
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        for (int i = 0; i < _orderManager.playerCard.Length; i++)
         {
             _orderManager.playerCard[i].score += AddScore[4];
             playerScoreSave.cardSO = _orderManager.playerCard[i];
@@ -71,7 +71,7 @@ public class ItemFunctions : MonoBehaviour
     }
     public void EveryScoreDownMethod()
     {
-        for (int i = 0; i < _orderManager.orderCount; i++)
+        for (int i = 0; i < _orderManager.playerCard.Length; i++)
         {
             _orderManager.playerCard[i].score -= AddScore[5];
             playerScoreSave.cardSO = _orderManager.playerCard[i];
