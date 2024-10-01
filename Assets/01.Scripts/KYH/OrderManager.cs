@@ -37,7 +37,7 @@ public class OrderManager : MonoBehaviour
     [SerializeField]
     private GameObject teamIcon;
 
-    private CardSO currentOrder;
+    public CardSO currentOrder;
 
     public List<RectTransform> randAnswerButtonPos = new List<RectTransform>();
 
@@ -54,6 +54,8 @@ public class OrderManager : MonoBehaviour
     private GameObject[] answerButton;
 
     private OpenChestTimeLine chestTimeLine;
+
+    [SerializeField] private CardSOManager playerScoreSave;
 
 
     private void Awake()
@@ -269,8 +271,11 @@ public class OrderManager : MonoBehaviour
     {
         correctChoosePanel.SetActive(false);
         ItemManager.Instance.orderPlayer.score += 200;
-        ItemManager.Instance.orderNum++;
+        playerScoreSave.cardSO = ItemManager.Instance.orderPlayer;
+        playerScoreSave.SaveCardSO();
+        playerScoreSave.cardSO = null;
         ItemManager.Instance.SetOrderTeams();
+        ItemManager.Instance.orderNum++;
         ScoreUp();
     }
 
@@ -285,7 +290,6 @@ public class OrderManager : MonoBehaviour
         ItemManager.instance.randItem = Random.Range(0, ItemManager.instance.ItemList.Count);
         revealedTeamIcon.SetActive(false);
         ItemManager.instance.ItemList[ItemManager.instance.randItem].SetActive(true);
-        ItemManager.Instance.orderNum++;
         ItemManager.Instance.SetOrderTeams();
     }
 
