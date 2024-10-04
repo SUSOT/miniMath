@@ -95,6 +95,7 @@ public class ItemFunctions : MonoBehaviour
         _itemText.StartCor();
         yield return new WaitForSeconds(2f);
         ItemManager.Instance.orderNum++;
+        _itemText._text.text = "";
         _orderManager.ItemUsed();
     }
 }
