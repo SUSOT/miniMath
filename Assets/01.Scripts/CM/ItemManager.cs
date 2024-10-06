@@ -16,7 +16,6 @@ public class ItemManager : MonoBehaviour
 
     public CardSO orderPlayer;
 
-    [HideInInspector]
     public int orderNum = 0;
 
     [SerializeField]

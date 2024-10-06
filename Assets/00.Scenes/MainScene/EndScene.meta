@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/00.Scenes/MainScene/EndScene.meta
 guid: ba85edc162ed38241b8aed071bb52ffc
 folderAsset: yes
 DefaultImporter:
+========
+guid: f8422f1329269b041afa4ac0eb1e0761
+TextScriptImporter:
+>>>>>>>> KDH:Assets/WhatIsProblem.json.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

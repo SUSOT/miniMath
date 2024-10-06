@@ -2,12 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 using TMPro;
 
 public class OrderManager : MonoBehaviour
 {
+    [SerializeField]
+    private MiniGameManager miniGameManager;
+
     [SerializeField]
     private CountDownTimer countDownTimer;
 
@@ -60,6 +64,8 @@ public class OrderManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         playerCard = GameManager.Instance.playerSO;
         maxTeamCount = GameManager.Instance.teamCount;
         for (int i = 0; i < playerCard.Length; i++)
@@ -75,6 +81,8 @@ public class OrderManager : MonoBehaviour
         //{
         //    print($"{playerCard[i].teamName}팀의 점수는{playerCard[i].score}");
         //}
+
+        Debug.Log("실행");
 
         print(currentOrder);
     }
@@ -119,6 +127,8 @@ public class OrderManager : MonoBehaviour
     {
         int rand = Random.Range(0, maxIdx);
         currentProblem = problemList.problemSO[rand];
+
+        if (maxIdx <= 0) return;
 
         ProblemSO temp = problemList.problemSO[rand];
         problemList.problemSO[rand] = problemList.problemSO[maxIdx - 1];
@@ -177,6 +187,9 @@ public class OrderManager : MonoBehaviour
     {
         print("오답");
         currentOrder.score -= 50;
+        playerScoreSave.cardSO = currentOrder;
+        playerScoreSave.SaveCardSO();
+        playerScoreSave.cardSO = null;
         currentOrder.isCorrectAnswer = false;
         WrongAnswerAnimation();
         OrderEnd();
@@ -221,22 +234,28 @@ public class OrderManager : MonoBehaviour
         wrongAnswer2.SetActive(false);
         chestTimeLine = FindAnyObjectByType<OpenChestTimeLine>();
         chestTimeLine.TimeLine();
-        StartCoroutine(RevealedRoutine());
+        StartCoroutine(WaitTimeLineTime());
     }
 
-
-    private IEnumerator RevealedRoutine()
+    private IEnumerator WaitTimeLineTime()
     {
         if (answerRevealed != null)
         {
             answerRevealed.Play();
             yield return new WaitForSeconds(5f);
             answerRevealed.Stop();
-            revealedTeamIcon.SetActive(true);
-            revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeIn();
-            yield return new WaitForSeconds(2);
             AnswerRightTeams();
         }
+    }
+
+    private IEnumerator RevealedRoutine()
+    {
+        revealedTeamIcon.SetActive(true);
+        revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeIn();
+        yield return new WaitForSeconds(2);
+        revealedTeamIcon.GetComponent<RevealedTeamIconFade>().FadeOut();
+        revealedTeamIcon.SetActive(false);
+        GameEnd();
     }
 
     private void AnswerRightTeams()
@@ -258,7 +277,8 @@ public class OrderManager : MonoBehaviour
     {
         if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count)
         {
-            GameEnd();
+            ItemManager.instance.ItemList[ItemManager.instance.randItem].SetActive(false);
+            StartCoroutine(RevealedRoutine());
         }
         else
         {
@@ -302,15 +322,21 @@ public class OrderManager : MonoBehaviour
     {
         if(currentProblemCount < GameManager.Instance.problemCount)
         {
-            ItemManager.instance.ItemList[ItemManager.instance.orderNum].SetActive(false);
+            currentProblemCount++;
+            Destroy(miniGameManager.currentSequencing);
             print("게임끝");
             chestTimeLine = null;
-            SolveStart();
-            currentProblemCount++;
+            miniGameManager.StartMiniGame();
+            teamIcon.SetActive(true);
+            for (int i = 0; i < playerCard.Length; i++)
+            {
+                playerCard[i].isCorrectAnswer = false;
+            }
+            ItemManager.Instance.revealedPlayers.Clear();
         }
         else
         {
-            //끝!
+            SceneManager.LoadScene("EndScene");
         }
     }
 }

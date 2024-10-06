@@ -6,7 +6,7 @@ using TMPro;
 
 public class ItemText : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _text;
+    public TMP_Text _text;
     [SerializeField] private float _time = 1f;
     [SerializeField] private List<string> _texts = new List<string>();
 

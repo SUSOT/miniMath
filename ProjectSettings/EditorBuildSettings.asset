@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/00.Scenes/MainScene/Tutorial.unity
     guid: 88feefa665b05974a8bbf36a58e1969a
   - enabled: 1
-    path: Assets/00.Scenes/KDH/AddProblem.unity
-    guid: 5812ef0f31b3fa84aa61104e92e935db
+    path: Assets/00.Scenes/MainScene/EndScene.unity
+    guid: 1725480bd79c58d45bf149a5451b9545
   m_configObjects: {}
