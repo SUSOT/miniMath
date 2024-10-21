@@ -17,16 +17,7 @@ public class SetImage : MonoBehaviour
     {
         _tex = GetComponent<TEXDraw>();
     }
-    private void Start()
-    {
-        StartCoroutine(Wait());
-    }
 
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(3f);
-        GetTexture("{3} over {2}");
-    }
     private string changetext(string susick)
     {
         susick = susick.Replace("\u00a0", "");
