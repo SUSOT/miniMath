@@ -34,16 +34,12 @@ public class RevealedTeamIconFade : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        for(int i = 0; i< GameManager.Instance.teamCount - 1; i++)
-        {
-            textMeshPros[i].SetText($"{orderManager.playerCard[i].score}Á¡");
-        }    
-    }
-
     public void FadeIn()
     {
+        for (int i = 0; i < GameManager.Instance.teamCount; i++)
+        {
+            textMeshPros[i].SetText($"{orderManager.playerCard[i].score}Á¡");
+        }
         blackPanel.DOFade(1, 1);
         for (int i = 0; i < teamCard.Length; i++)
         {
@@ -53,6 +49,10 @@ public class RevealedTeamIconFade : MonoBehaviour
     public void FadeOut()
     {
         blackPanel.DOFade(0, 1);
+        for (int i = 0; i < GameManager.Instance.teamCount; i++)
+        {
+            textMeshPros[i].SetText("");
+        }
         for (int i = 0; i < teamCard.Length; i++)
         {
             teamCard[i].DOFade(0, 1);
