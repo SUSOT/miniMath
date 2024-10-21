@@ -29,7 +29,7 @@ public class OrderManager : MonoBehaviour
 
 
     [SerializeField]
-    private TextMeshProUGUI mainText;
+    private SetImage mainText;
     [SerializeField]
     private TextMeshProUGUI currentOrderText;
     [SerializeField]
@@ -103,9 +103,12 @@ public class OrderManager : MonoBehaviour
         correctAnswer.SetActive(true);
         wrongAnswer.SetActive(true);
         wrongAnswer2.SetActive(true);
+        correctAnswer.GetComponentInChildren<SetImage>().GetTexture(currentProblem.CorrectAnswer);
+        wrongAnswer.GetComponentInChildren<SetImage>().GetTexture(currentProblem.firstWrongAnswer);
+        wrongAnswer2.GetComponentInChildren<SetImage>().GetTexture(currentProblem.secondWrongAnswer);
         orderCount = 0;
         OrderChange();
-        mainText.text = "";
+        mainText.GetTexture("");
     }
 
     int maxIdx;
@@ -119,8 +122,8 @@ public class OrderManager : MonoBehaviour
 
         //문제 세팅
         SettingProblem();
-
-        mainText.text = currentProblem.whatIsProblem;
+        mainText.gameObject.SetActive(true);
+        mainText.GetTexture(currentProblem.whatIsProblem);
     }
 
     private void RandomProblemGacha()
@@ -145,13 +148,9 @@ public class OrderManager : MonoBehaviour
             answerButton[j].transform.SetParent(null);
         }
 
-        correctAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.CorrectAnswer;
-        wrongAnswer.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.firstWrongAnswer;
-        wrongAnswer2.GetComponentInChildren<TextMeshProUGUI>().text = currentProblem.secondWrongAnswer;
-        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.whatIsProblem);
-        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.CorrectAnswer);
-        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.firstWrongAnswer);
-        GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.secondWrongAnswer);
+
+        //GameObject.Find("ItemChooseCanvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture(currentProblem.whatIsProblem);
+
 
         RandomShuffle.GetRandomShuffleList(randAnswerButtonPos);
 
@@ -275,7 +274,7 @@ public class OrderManager : MonoBehaviour
 
     private void RevealedTemasChooseTime()
     {
-        if(ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count)
+        if (ItemManager.Instance.orderNum >= ItemManager.Instance.revealedPlayers.Count)
         {
             ItemManager.instance.ItemList[ItemManager.instance.randItem].SetActive(false);
             StartCoroutine(RevealedRoutine());
@@ -320,7 +319,7 @@ public class OrderManager : MonoBehaviour
 
     private void GameEnd()
     {
-        if(currentProblemCount < GameManager.Instance.problemCount)
+        if (currentProblemCount < GameManager.Instance.problemCount)
         {
             currentProblemCount++;
             Destroy(miniGameManager.currentSequencing);
