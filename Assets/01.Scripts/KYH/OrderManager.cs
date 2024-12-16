@@ -109,6 +109,7 @@ public class OrderManager : MonoBehaviour
         orderCount = 0;
         OrderChange();
         mainText.GetTexture("");
+        mainText.gameObject.SetActive(false);
     }
 
     int maxIdx;
